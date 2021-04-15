@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="icon_home" format="reference"/>
+    <attr name="icon_list" format="reference"/>
+    <attr name="icon_quiz" format="reference"/>
+</resources>

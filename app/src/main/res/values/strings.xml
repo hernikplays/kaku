@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Kaku</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- labels -->
+    <string name="home_label">Home</string>
+    <string name="list_label">Kanji list</string>
+
+    <!-- text -->
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="welcome">Welcome to\nKaku</string>
+    <string name="welcome_info_1">Kaku is a tool to practice kanji in real sentences.</string>
+    <string name="welcome_info_2">You will be given a sentence with kanji and you\'ll write it in hiragana.</string>
+    <string name="welcome_info_3">To get started, swipe right to view the menu and click "Set kanji list" to create a list of kanji you know.</string>
+    <string name="save">Save</string>
+    <string name="wk_api_key">Your WK API key</string>
+    <string name="btn_import">Import</string>
+    <string name="import_wk_label">Import from WaniKani</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="label_writing">Writing</string>
+    <string name="importing_message">Importing from WaniKani\nKeep in mind that the API has a ratelimit 60 requests per minute.</string>
+</resources>

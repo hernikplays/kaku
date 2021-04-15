@@ -1,0 +1,30 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Kaku" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/blue</item>
+        <item name="colorPrimaryVariant">@color/blueDark</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/blueGreen</item>
+        <item name="colorSecondaryVariant">@color/blueGreenDark</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+        <item name="icon_home">@drawable/ic_home_light</item>
+        <item name="icon_list">@drawable/ic_list_light</item>
+        <item name="icon_quiz">@drawable/ic_test_light</item>
+
+        <item name="colorAccent">#1E1E1E</item>
+    </style>
+
+    <style name="Theme.Kaku.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.Kaku.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.Kaku.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+</resources>

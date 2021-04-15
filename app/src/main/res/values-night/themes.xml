@@ -1,0 +1,22 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Kaku" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/blueDark</item>
+        <item name="colorPrimaryVariant">@color/blueLight</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/blueGreenDark</item>
+        <item name="colorSecondaryVariant">@color/blueGreen</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+        <item name="icon_home">@drawable/ic_home_dark</item>
+        <item name="icon_list">@drawable/ic_list_dark</item>
+        <item name="icon_quiz">@drawable/ic_test_dark</item>
+
+
+        <item name="colorAccent">#ffffff</item>
+    </style>
+</resources>
