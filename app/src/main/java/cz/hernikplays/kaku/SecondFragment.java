@@ -107,6 +107,9 @@ public class SecondFragment extends Fragment {
 
             // save to file
             SaveKanji(kanji.toString().getBytes());
+
+            EditText kanjiEdit = mainView.findViewById(R.id.kanjiList);
+            kanjiEdit.setText(kanji.toString());
         });
 
         // set WK button
