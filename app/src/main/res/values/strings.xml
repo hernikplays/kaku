@@ -23,4 +23,5 @@
     <string name="wrs_kanjicount">You currently have %s kanji in your list. To change your kanji, swipe right and click on "Kanji list".</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="placeholder">Placeholder</string>
 </resources>

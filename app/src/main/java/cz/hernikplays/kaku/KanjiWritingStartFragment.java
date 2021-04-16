@@ -20,6 +20,8 @@ import java.nio.charset.StandardCharsets;
 
 public class KanjiWritingStartFragment extends Fragment {
 
+
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -63,6 +65,13 @@ public class KanjiWritingStartFragment extends Fragment {
             String mes = String.format(c.getResources().getString(R.string.wrs_kanjicount),String.valueOf(content.length()));
             TextView tw = view.findViewById(R.id.messview);
             tw.setText(mes);
+
+            view.findViewById(R.id.start).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    startWriting(content);
+                }
+            });
         }
         else{
             // else show dialog
@@ -82,5 +91,22 @@ public class KanjiWritingStartFragment extends Fragment {
             });
             d.create().show();
         }
+
+
+    }
+
+    private void startWriting(String kanji){
+        Fragment f = null;
+        try {
+            f = KanjiWritingFragment.class.newInstance();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        // set kanji list as argument and pass it to the KanjiWriting Fragment and transition to it
+        Bundle args = new Bundle();
+        args.putString("kanjilist",kanji);
+        f.setArguments(args);
+
+        getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.flContent,f).commit();
     }
 }
