@@ -16,8 +16,11 @@
     <string name="wk_api_key">Your WK API key</string>
     <string name="btn_import">Import</string>
     <string name="import_wk_label">Import from WaniKani</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="label_writing">Writing</string>
     <string name="importing_message">Importing from WaniKani\nKeep in mind that the API has a ratelimit 60 requests per minute.</string>
+    <string name="start_writing">Start writing!</string>
+    <string name="start">Start</string>
+    <string name="wrs_kanjicount">You currently have %s kanji in your list. To change your kanji, swipe right and click on "Kanji list".</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

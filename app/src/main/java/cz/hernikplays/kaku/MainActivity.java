@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
         if (itemId == R.id.nav_second_fragment) {
             fragmentClass = SecondFragment.class;
         } else if (itemId == R.id.nav_third_fragment) {
-            fragmentClass = KanjiWritingFragment.class;
+            fragmentClass = KanjiWritingStartFragment.class;
         } else {
             fragmentClass = FirstFragment.class;
         }
