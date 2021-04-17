@@ -17,6 +17,8 @@ public class HiraganaTable {
         hiraganaMap.put("o", "お");
         hiraganaMap.put("-", "ー");
         hiraganaMap.put(".", "。");
+        hiraganaMap.put(",","、");
+        hiraganaMap.put("?","？");
 
         //K
         hiraganaMap.put("ka", "か");
@@ -197,5 +199,7 @@ public class HiraganaTable {
     }
 
     public static final String hiraganaRegex = "[あいうえおかきくけこがぎぐげごさしすせそざじずぜぞたちつてと" +
-            "っだぢづでどなにぬねのはひふへほばびぶべぼぱぴぷぺぽまみむめもやゆよゃゅょらりるれろわをんー。]";
+            "っだぢづでどなにぬねのはひふへほばびぶべぼぱぴぷぺぽまみむめもやゆよゃゅょらりるれろわをんー。、？]";
+
+
 }

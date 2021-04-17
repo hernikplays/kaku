@@ -7,9 +7,12 @@
     tools:context=".KanjiWritingFragment">
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/japanese_sentence"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center"
         android:text="@string/placeholder"
         android:textSize="26dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -20,13 +23,57 @@
         app:layout_constraintVertical_bias="0.112" />
 
     <cz.hernikplays.kaku.helper.HiraganaEditText
+        android:id="@+id/hiraganaEditText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="Type your japanese here"
+        android:hint="@string/input_japanese_msg"
         android:inputType="textNoSuggestions|textVisiblePassword"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6"
-        app:layout_constraintVertical_bias="0.071" />
+        app:layout_constraintTop_toBottomOf="@+id/japanese_sentence"
+        app:layout_constraintVertical_bias="0.071"
+        android:imeOptions="actionGo"
+        android:imeActionId="666"
+        android:imeActionLabel="Some Label"
+        android:maxLines="1"/>
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/submit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hiraganaEditText"
+        app:layout_constraintVertical_bias="0.105" />
+
+    <TextView
+        android:id="@+id/correct_wrong"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/Paragraph"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/submit"
+        app:layout_constraintVertical_bias="0.07" />
+
+    <TextView
+        android:id="@+id/english"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="center"
+        android:textAppearance="@style/Paragraph"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/correct_wrong"
+        app:layout_constraintVertical_bias="0.109" />
 </androidx.constraintlayout.widget.ConstraintLayout>

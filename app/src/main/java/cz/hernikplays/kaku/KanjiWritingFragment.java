@@ -10,9 +10,11 @@ import androidx.fragment.app.Fragment;
 
 import android.os.Handler;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import org.json.JSONArray;
@@ -23,17 +25,26 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
-import java.util.concurrent.atomic.AtomicReference;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
+import com.atilika.kuromoji.ipadic.Token;
+import com.atilika.kuromoji.ipadic.Tokenizer;
+
+import cz.hernikplays.kaku.helper.KatakanaTable;
 
 public class KanjiWritingFragment extends Fragment {
 
     private Dialog dialog;
     private Context c;
     private Dialog loadDialog;
+    private View mainView;
+    private EditText userInput;
+    private int currentIndex = 0;
+    private List<JSONObject> knownSentences;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -44,10 +55,11 @@ public class KanjiWritingFragment extends Fragment {
 
     public void onViewCreated(View view, Bundle savedInstanceState){
         super.onViewCreated(view,savedInstanceState);
+        currentIndex = 0;
         c = getContext();
         String knownKanji = this.getArguments().getString("kanjilist");
         AssetManager assetManager = getActivity().getAssets();
-
+        mainView = view;
         // load tatoeba strings
         Thread th = new Thread(()->{
             Handler handler = new Handler(getActivity().getMainLooper());
@@ -80,7 +92,7 @@ public class KanjiWritingFragment extends Fragment {
                 e.printStackTrace();
             }
             // hide loading dialog
-            getActivity().runOnUiThread(() -> loadDialog.hide());
+            getActivity().runOnUiThread(() -> loadDialog.dismiss());
 
             // show filtering
             View aV = getLayoutInflater().inflate(R.layout.progress,null);
@@ -97,7 +109,7 @@ public class KanjiWritingFragment extends Fragment {
                 }
             });
             // get strings with known kanji
-            List<String> knownSentences = new ArrayList<>();
+            knownSentences = new ArrayList<>();
             for(int i = 0;i<sentences.length();i++){
                 String sentence = null;
                 try {
@@ -109,22 +121,120 @@ public class KanjiWritingFragment extends Fragment {
                         foundKanji.append(matcher.group(0));
                     }
 
-                    if(knownKanji.contains(foundKanji.toString())){
-                        knownSentences.add(sentence);
+                    if(!foundKanji.toString().equals("") && knownKanji.contains(foundKanji.toString())){
+                        knownSentences.add(sentences.getJSONObject(i));
                     }
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
             }
-            Runnable runnable = () -> displayKanji(knownSentences);
-            // call back to main threadQ
+            Runnable runnable = () -> {
+                try {
+                    // randomize
+                    Collections.shuffle(knownSentences);
+                    snapBack();
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            };
+            // call back to main thread
             handler.post(runnable);
         });
         th.start();
     }
 
-    private void displayKanji(List<String> sentenceList){
-        Log.d("debug",sentenceList.get(0));
-        dialog.hide();
+    private void snapBack() throws JSONException {
+        String jpSentence = knownSentences.get(currentIndex).getString("FIELD1");
+
+        userInput = mainView.findViewById(R.id.hiraganaEditText);
+        userInput.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                if (event == null || event.getAction() != KeyEvent.ACTION_DOWN)
+                    return false;
+                try {
+                    submit();
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+                return true;
+            }
+        });
+        mainView.findViewById(R.id.submit).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try {
+                    submit();
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+
+        displayKanji(jpSentence);
+
+        dialog.dismiss();
+    }
+
+    private void displayKanji(String jpSentence) {
+        TextView sentenceDisplay = mainView.findViewById(R.id.japanese_sentence);
+        sentenceDisplay.setText(jpSentence);
+    }
+
+
+    private void submit() throws JSONException {
+        String jpSentence = knownSentences.get(currentIndex).getString("FIELD1");
+        String enSentence = knownSentences.get(currentIndex).getString("FIELD2");
+
+        Thread convert = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                Tokenizer tokenizer = new Tokenizer() ;
+
+                // convert japanese sentence to reading
+                List<Token> tokens = tokenizer.tokenize(jpSentence);
+                StringBuilder jpKata = new StringBuilder();
+                for (Token token : tokens) {
+                    jpKata.append(token.getReading());
+                }
+
+                // convert user's input to reading
+                String input = userInput.getText().toString();
+                List<Token> userTokens = tokenizer.tokenize(input);
+                StringBuilder userKata = new StringBuilder();
+                for (Token token: userTokens){
+                    userKata.append(token.getReading());
+                }
+
+                String jpConv = jpKata.toString();
+                String userConv = userKata.toString();
+                if(jpConv.equals(userConv)){
+                    getActivity().runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            TextView correct = mainView.findViewById(R.id.correct_wrong);
+                            correct.setText(R.string.correct);
+
+                            TextView english = mainView.findViewById(R.id.english);
+                            english.setText(String.format((String) getActivity().getText(R.string.english_meaning),enSentence));
+                        }
+                    });
+                }
+                else{
+                    /*TextView correct = mainView.findViewById(R.id.correct_wrong);
+                    correct.setText(R.string.correct);*/
+                    getActivity().runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            TextView correct = mainView.findViewById(R.id.correct_wrong);
+                            correct.setText(KatakanaTable.toHiragana(jpConv));
+                            TextView english = mainView.findViewById(R.id.english);
+                            english.setText(String.format((String) getActivity().getText(R.string.english_meaning),enSentence));
+                        }
+                    });
+                }
+            }
+        });
+        convert.start();
     }
 }
