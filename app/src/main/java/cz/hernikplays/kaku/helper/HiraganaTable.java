@@ -19,6 +19,7 @@ public class HiraganaTable {
         hiraganaMap.put(".", "。");
         hiraganaMap.put(",","、");
         hiraganaMap.put("?","？");
+        hiraganaMap.put("!","！");
 
         //K
         hiraganaMap.put("ka", "か");

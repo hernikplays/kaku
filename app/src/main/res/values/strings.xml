@@ -26,8 +26,9 @@
     <string name="msg_loading_sentences">Loading sentences…</string>
     <string name="submit">Submit</string>
     <string name="input_japanese_msg">Type your japanese here</string>
-    <string name="correct">Correct!</string>
+    <string name="correct"><![CDATA[<p><font color=\'#32f039\'>Correct!</font></p> ]]></string>
     <string name="english_meaning">English meaning:\n%s</string>
-    <string name="wrong">Wrong!</string>
+    <string name="wrong"><![CDATA[<p><font color=\'#eb4034\'>Wrong!</font><br>%s</p> ]]></string>
+    <string name="next">Next</string>
 
 </resources>

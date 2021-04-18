@@ -9,11 +9,13 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
 
 import android.os.Handler;
+import android.text.Html;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -57,6 +59,22 @@ public class KanjiWritingFragment extends Fragment {
         super.onViewCreated(view,savedInstanceState);
         currentIndex = 0;
         c = getContext();
+
+        Button next = view.findViewById(R.id.next);
+        next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                currentIndex++;
+                try {
+                    displayKanji(knownSentences.get(currentIndex).getString("FIELD1"));
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+                EditText hiragana = mainView.findViewById(R.id.hiraganaEditText);
+                hiragana.setText("");
+            }
+        });
+
         String knownKanji = this.getArguments().getString("kanjilist");
         AssetManager assetManager = getActivity().getAssets();
         mainView = view;
@@ -208,15 +226,15 @@ public class KanjiWritingFragment extends Fragment {
 
                 String jpConv = jpKata.toString();
                 String userConv = userKata.toString();
-                if(jpConv.equals(userConv)){
+                if(jpConv.replaceAll("[！？。]","").equals(userConv.replaceAll("[！？。]",""))){
                     getActivity().runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
                             TextView correct = mainView.findViewById(R.id.correct_wrong);
-                            correct.setText(R.string.correct);
+                            correct.setText(Html.fromHtml(getString(R.string.correct)));
 
                             TextView english = mainView.findViewById(R.id.english);
-                            english.setText(String.format((String) getActivity().getText(R.string.english_meaning),enSentence));
+                            english.setText(String.format(getString(R.string.english_meaning),enSentence));
                         }
                     });
                 }
@@ -227,9 +245,9 @@ public class KanjiWritingFragment extends Fragment {
                         @Override
                         public void run() {
                             TextView correct = mainView.findViewById(R.id.correct_wrong);
-                            correct.setText(KatakanaTable.toHiragana(jpConv));
+                            correct.setText(Html.fromHtml(String.format(getString(R.string.wrong),KatakanaTable.toHiragana(jpConv))));
                             TextView english = mainView.findViewById(R.id.english);
-                            english.setText(String.format((String) getActivity().getText(R.string.english_meaning),enSentence));
+                            english.setText(String.format(getString(R.string.english_meaning),enSentence));
                         }
                     });
                 }

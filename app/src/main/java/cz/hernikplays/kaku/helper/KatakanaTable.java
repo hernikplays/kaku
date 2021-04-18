@@ -13,9 +13,9 @@ public class KatakanaTable {
         katakanaMap.put("ウ" ,"う");
         katakanaMap.put("エ" ,"え");
         katakanaMap.put("オ" ,"お");
-        katakanaMap.put("ー" ,"-");
-        katakanaMap.put("。" ,".");
-        katakanaMap.put("、" ,",");
+        katakanaMap.put("ー" ,"ー");
+        katakanaMap.put("。" ,"。");
+        katakanaMap.put("、" ,"、");
 
         katakanaMap.put("カ","か");
         katakanaMap.put("キ","き");
@@ -167,7 +167,6 @@ public class KatakanaTable {
 
         String converted = "";
         for (String syllabe : syllabes) {
-            Log.d("DEBUG",syllabe);
             if (katakanaMap.containsKey(syllabe)) {
                 converted = converted.concat(katakanaMap.get(syllabe));
             } else {
