@@ -1,5 +1,7 @@
 package cz.hernikplays.kaku;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import com.google.android.material.navigation.NavigationView;
@@ -10,7 +12,9 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
+import androidx.preference.PreferenceManager;
 
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -98,9 +102,15 @@ public class MainActivity extends AppCompatActivity {
             case android.R.id.home:
                 mDrawer.openDrawer(GravityCompat.START);
                 return true;
+            case R.id.action_settings:
+                Intent intent = new Intent(this, SettingsActivity.class);
+                startActivity(intent);
+                return true;
+
         }
 
         return super.onOptionsItemSelected(item);
     }
+
 
 }

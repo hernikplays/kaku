@@ -64,6 +64,11 @@ public class KanjiWritingFragment extends Fragment {
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                next.setVisibility(View.GONE);
+                TextView correct = mainView.findViewById(R.id.correct_wrong);
+                correct.setText("");
+                TextView english = mainView.findViewById(R.id.english);
+                english.setText("");
                 currentIndex++;
                 try {
                     displayKanji(knownSentences.get(currentIndex).getString("FIELD1"));
@@ -72,6 +77,9 @@ public class KanjiWritingFragment extends Fragment {
                 }
                 EditText hiragana = mainView.findViewById(R.id.hiraganaEditText);
                 hiragana.setText("");
+
+                Button submit = mainView.findViewById(R.id.submit);
+                submit.setClickable(true);
             }
         });
 
@@ -134,13 +142,23 @@ public class KanjiWritingFragment extends Fragment {
                     sentence = sentences.getJSONObject(i).getString("FIELD1");
                     final Pattern pattern = Pattern.compile("[\u3005\u3400-\u4DB5\u4E00-\u9FCB\uF900-\uFA6A]", Pattern.MULTILINE); // <3 https://github.com/cubetastic33/sakubun/blob/a87d6cf9c686173663955ef93e82baaec5cbc0ec/static/scripts/known_kanji.js#L57
                     final Matcher matcher = pattern.matcher(sentence);
-                    StringBuilder foundKanji = new StringBuilder();
+                    List<String> foundKanji = new ArrayList<>();
                     while(matcher.find()){
-                        foundKanji.append(matcher.group(0));
+                        foundKanji.add(matcher.group(0));
                     }
 
-                    if(!foundKanji.toString().equals("") && knownKanji.contains(foundKanji.toString())){
-                        knownSentences.add(sentences.getJSONObject(i));
+                    if(foundKanji.size() > 0){
+                        boolean add = false;
+                        for (String kanji:foundKanji){
+                            if(knownKanji.contains(kanji)) add = true;
+                            else {
+                                add = false;
+                                break;
+                            }
+                        }
+                        if(add){
+                            knownSentences.add(sentences.getJSONObject(i));
+                        }
                     }
                 } catch (JSONException e) {
                     e.printStackTrace();
@@ -210,7 +228,7 @@ public class KanjiWritingFragment extends Fragment {
                 Tokenizer tokenizer = new Tokenizer() ;
 
                 // convert japanese sentence to reading
-                List<Token> tokens = tokenizer.tokenize(jpSentence);
+                List<Token> tokens = tokenizer.tokenize(replaceNumbers(jpSentence));
                 StringBuilder jpKata = new StringBuilder();
                 for (Token token : tokens) {
                     jpKata.append(token.getReading());
@@ -235,12 +253,15 @@ public class KanjiWritingFragment extends Fragment {
 
                             TextView english = mainView.findViewById(R.id.english);
                             english.setText(String.format(getString(R.string.english_meaning),enSentence));
+                            Button next = mainView.findViewById(R.id.next);
+                            next.setVisibility(View.VISIBLE);
+
+                            Button submit = mainView.findViewById(R.id.submit);
+                            submit.setClickable(false);
                         }
                     });
                 }
                 else{
-                    /*TextView correct = mainView.findViewById(R.id.correct_wrong);
-                    correct.setText(R.string.correct);*/
                     getActivity().runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
@@ -248,11 +269,20 @@ public class KanjiWritingFragment extends Fragment {
                             correct.setText(Html.fromHtml(String.format(getString(R.string.wrong),KatakanaTable.toHiragana(jpConv))));
                             TextView english = mainView.findViewById(R.id.english);
                             english.setText(String.format(getString(R.string.english_meaning),enSentence));
+                            Button next = mainView.findViewById(R.id.next);
+                            next.setVisibility(View.VISIBLE);
+
+                            Button submit = mainView.findViewById(R.id.submit);
+                            submit.setClickable(false);
                         }
                     });
                 }
             }
         });
         convert.start();
+    }
+
+    public String replaceNumbers(String input){
+        return input.replaceAll("0","０").replaceAll("1","１").replaceAll("2","２").replaceAll("3","３").replaceAll("4","４").replaceAll("5","５").replaceAll("6","６").replaceAll("7","７").replaceAll("8","８").replaceAll("9","９");
     }
 }

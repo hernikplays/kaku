@@ -14,7 +14,33 @@
         <action
             android:id="@+id/action_FirstFragment_to_SecondFragment"
             app:destination="@id/SecondFragment" />
+        <action
+            android:id="@+id/action_SecondFragment_to_KanjiWritingStart"
+            app:destination="@id/KanjiWritingStartFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/KanjiWritingStartFragment"
+        android:name="cz.hernikplays.kaku.KanjiWritingStartFragment"
+        android:label="@string/label_writing"
+        tools:layout="@layout/fragment_kanji_writing_start">
+        <action
+            android:id="@+id/action_KanjiWritingStart_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+        <action
+            android:id="@+id/action_KanjiWritingStart_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/action_KanjiWritingStart_to_KanjiWriting"
+            app:destination="@id/KanjiWritingFragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/KanjiWritingFragment"
+        android:name="cz.hernikplays.kaku.KanjiWritingFragment"
+        android:label="@string/label_writing"
+        tools:layout="@layout/fragment_kanji_writing">
+
+    </fragment>
+
     <fragment
         android:id="@+id/SecondFragment"
         android:name="cz.hernikplays.kaku.SecondFragment"
@@ -24,5 +50,8 @@
         <action
             android:id="@+id/action_SecondFragment_to_FirstFragment"
             app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/action_SecondFragment_to_KanjiWritingStart"
+            app:destination="@id/KanjiWritingStartFragment" />
     </fragment>
 </navigation>

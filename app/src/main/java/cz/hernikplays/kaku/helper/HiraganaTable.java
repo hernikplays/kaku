@@ -60,7 +60,11 @@ public class HiraganaTable {
         hiraganaMap.put("to", "と");
 
         hiraganaMap.put("lttu", "っ");
-//		hiraganaMap.put("lttsu", "");
+        hiraganaMap.put("lli", "ぃ");
+        hiraganaMap.put("llu", "ぅ");
+        hiraganaMap.put("lla", "ぁ");
+        hiraganaMap.put("lle", "ぇ");
+        hiraganaMap.put("llo", "ぉ");
 
         //D
         hiraganaMap.put("da", "だ");

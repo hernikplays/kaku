@@ -89,8 +89,8 @@ public class KatakanaTable {
         katakanaMap.put("ユ","ゆ");
         katakanaMap.put("ヨ","よ");
 
-        katakanaMap.put("ゃ","ゃ");
-        katakanaMap.put("ゅ","ゅ");
+        katakanaMap.put("ャ","ゃ");
+        katakanaMap.put("ュ","ゅ");
         katakanaMap.put("ョ","ょ");
 
         katakanaMap.put("ラ","ら");
@@ -104,49 +104,6 @@ public class KatakanaTable {
 
         katakanaMap.put("ン","ん");
 
-        katakanaMap.put("キャ","きゃ");
-        katakanaMap.put("きゅ","きゅ");
-        katakanaMap.put("きょ","きょ");
-
-        katakanaMap.put("ギャ","ぎゃ");
-        katakanaMap.put("ギュ","ぎゅ");
-        katakanaMap.put("ギョ","ぎょ");
-
-        katakanaMap.put("シャ","しゃ");
-        katakanaMap.put("シュ","しゅ");
-        katakanaMap.put("ショ","しょ");
-
-        katakanaMap.put("ジャ","じゃ");
-        katakanaMap.put("ジュ","じゅ");
-        katakanaMap.put("ジョ","じょ");
-
-        katakanaMap.put("チャ" ,"ちゃ");
-        katakanaMap.put("チュ" ,"ちゅ");
-        katakanaMap.put("チョ" ,"ちょ");
-
-        katakanaMap.put("ニャ" ,"にゃ");
-        katakanaMap.put("ニュ" ,"にゅ");
-        katakanaMap.put("ニョ" ,"にょ");
-
-        katakanaMap.put("ヒャ" ,"ひゃ");
-        katakanaMap.put("ヒュ" ,"ひゅ");
-        katakanaMap.put("ヒョ" ,"ひょ");
-
-        katakanaMap.put("ビャ" ,"びゃ");
-        katakanaMap.put("ビュ" ,"びゅ");
-        katakanaMap.put("ビョ" ,"びょ");
-
-        katakanaMap.put("ピャ" ,"ぴゃ");
-        katakanaMap.put("ピュ" ,"ぴゅ");
-        katakanaMap.put("ピョ" ,"ぴょ");
-
-        katakanaMap.put("ミャ" ,"みゃ");
-        katakanaMap.put("ミュ" ,"みゅ");
-        katakanaMap.put("ミョ" ,"みょ");
-
-        katakanaMap.put("リャ" ,"りゃ");
-        katakanaMap.put("リュ" ,"りゅ");
-        katakanaMap.put("リョ" ,"りょ");
 
     }
 

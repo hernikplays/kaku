@@ -4,3 +4,4 @@ Files used: HiraganaEditText.java and HiraganaTable.java
 
 - Removed `@TargetApi(Build.VERSION_CODES.LOLLIPOP)` and the associated method
 - Removed commented code
+- added small aeiou
