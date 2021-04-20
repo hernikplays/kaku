@@ -106,6 +106,9 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(this, SettingsActivity.class);
                 startActivity(intent);
                 return true;
+            case R.id.action_about:
+                Intent about = new Intent(this, AboutActivity.class);
+                startActivity(about);
 
         }
 

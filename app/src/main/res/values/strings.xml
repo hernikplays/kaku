@@ -36,14 +36,21 @@
     <string name="english_meaning">English meaning:\n%s</string>
     <string name="wrong"><![CDATA[<p><font color=\'#eb4034\'>Wrong!</font><br>%s</p> ]]></string>
     <string name="next">Next</string>
+    <string name="points">You got %d points out of %d</string>
 
     <!-- Preferences -->
     <string name="title_activity_settings">Settings</string>
     <string name="punct_summary_off">Kaku WILL NOT check if you ended the sentence with 。？ or ！</string>
-    <string name="punct_summary_on">Kaku WILL check if you ended the sentence with 。？ and ！ (depending on the sentence)</string>
+    <string name="punct_summary_on">Kaku WILL check if you ended the sentence with 。？ or ！ (depending on the sentence)</string>
     <string name="punct_title">Check for 。？ and ！</string>
     <string name="count_title">Count points</string>
     <string name="hiraganaedit_title">Use HiraganaEditText</string>
     <string name="hiraganaedit_summary">If you don\'t want to use a keyboard with hiragana</string>
+
+    <!-- about -->
+    <string name="about">About</string>
+    <string name="runs_thanks">Kaku runs thanks to these\n open-source resources:</string>
+    <string name="licenses">- Material Icons used under Apache 2.0 License\n- JP-EN sentences from Tatoeba.org used under CC BY 2.0 license\n- HiraganaEditText by jehutyno used under Apache 2.0 license\n- Kuromoji morphological analyzer used under the Apache 2.0 license</string>
+    <string name="btn_repo">GitHub Repo</string>
 
 </resources>

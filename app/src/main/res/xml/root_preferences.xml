@@ -15,7 +15,6 @@
             app:title="@string/hiraganaedit_title"
             app:summary="@string/hiraganaedit_summary"
             app:defaultValue="true"/>
-
     </PreferenceCategory>
 
 

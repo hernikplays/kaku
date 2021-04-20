@@ -2,11 +2,13 @@ package cz.hernikplays.kaku;
 
 import android.app.Dialog;
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.content.res.AssetManager;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
+import androidx.preference.PreferenceManager;
 
 import android.os.Handler;
 import android.text.Html;
@@ -47,6 +49,9 @@ public class KanjiWritingFragment extends Fragment {
     private EditText userInput;
     private int currentIndex = 0;
     private List<JSONObject> knownSentences;
+    private SharedPreferences pref;
+    private int yourPoints = 0;
+    private int totalPoints = 0;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -59,7 +64,27 @@ public class KanjiWritingFragment extends Fragment {
         super.onViewCreated(view,savedInstanceState);
         currentIndex = 0;
         c = getContext();
+        pref = PreferenceManager.getDefaultSharedPreferences(c);
 
+        if(pref.getBoolean("hiraganaedit",true)){
+            userInput = view.findViewById(R.id.hiraganaEditText);
+            userInput.setVisibility(View.VISIBLE);
+            EditText plain = view.findViewById(R.id.plainEditText);
+            plain.setVisibility(View.GONE);
+        }
+        else{
+            userInput = view.findViewById(R.id.plainEditText);
+            userInput.setVisibility(View.VISIBLE);
+            EditText hira = view.findViewById(R.id.hiraganaEditText);
+            hira.setVisibility(View.GONE);
+        }
+
+        if(pref.getBoolean("count",false)){
+            TextView points = view.findViewById(R.id.points);
+            points.setText(String.format(getString(R.string.points),0,0));
+        }
+
+        // next onclick
         Button next = view.findViewById(R.id.next);
         next.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -75,8 +100,7 @@ public class KanjiWritingFragment extends Fragment {
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
-                EditText hiragana = mainView.findViewById(R.id.hiraganaEditText);
-                hiragana.setText("");
+                userInput.setText("");
 
                 Button submit = mainView.findViewById(R.id.submit);
                 submit.setClickable(true);
@@ -182,7 +206,7 @@ public class KanjiWritingFragment extends Fragment {
     private void snapBack() throws JSONException {
         String jpSentence = knownSentences.get(currentIndex).getString("FIELD1");
 
-        userInput = mainView.findViewById(R.id.hiraganaEditText);
+        //userInput = mainView.findViewById(R.id.hiraganaEditText);
         userInput.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
@@ -244,7 +268,13 @@ public class KanjiWritingFragment extends Fragment {
 
                 String jpConv = jpKata.toString();
                 String userConv = userKata.toString();
-                if(jpConv.replaceAll("[！？。]","").equals(userConv.replaceAll("[！？。]",""))){
+
+                // replace !?.
+                if(!pref.getBoolean("punct", false)){
+                    jpConv = jpConv.replaceAll("[！？。]","");
+                    userConv = userConv.replaceAll("[！？。]","");
+                }
+                if(jpConv.equals(userConv)){
                     getActivity().runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
@@ -258,15 +288,23 @@ public class KanjiWritingFragment extends Fragment {
 
                             Button submit = mainView.findViewById(R.id.submit);
                             submit.setClickable(false);
+
+                            if(pref.getBoolean("count",false)){
+                                TextView points = mainView.findViewById(R.id.points);
+                                yourPoints++;
+                                totalPoints++;
+                                points.setText(String.format(getString(R.string.points), yourPoints, totalPoints));
+                            }
                         }
                     });
                 }
                 else{
+                    String finalJpConv = jpConv;
                     getActivity().runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
                             TextView correct = mainView.findViewById(R.id.correct_wrong);
-                            correct.setText(Html.fromHtml(String.format(getString(R.string.wrong),KatakanaTable.toHiragana(jpConv))));
+                            correct.setText(Html.fromHtml(String.format(getString(R.string.wrong),KatakanaTable.toHiragana(finalJpConv))));
                             TextView english = mainView.findViewById(R.id.english);
                             english.setText(String.format(getString(R.string.english_meaning),enSentence));
                             Button next = mainView.findViewById(R.id.next);
@@ -274,6 +312,11 @@ public class KanjiWritingFragment extends Fragment {
 
                             Button submit = mainView.findViewById(R.id.submit);
                             submit.setClickable(false);
+                            if(pref.getBoolean("count",false)){
+                                TextView points = mainView.findViewById(R.id.points);
+                                totalPoints++;
+                                points.setText(String.format(getString(R.string.points), yourPoints, totalPoints));
+                            }
                         }
                     });
                 }
