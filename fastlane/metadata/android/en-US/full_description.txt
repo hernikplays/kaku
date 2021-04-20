@@ -1,0 +1,5 @@
+Kaku is an application for people learning japanese, who want to practice writing (+reading) kanji on keyboard on their phone!
+<br>
+Simply open the app, add some kanji and test yourself, everything should work offline (except, of course, the WaniKani integration which requires internet connection, d'uh)
+<br>
+Uses sentences from Tatoeba.org which contain only the kanjis you know.

@@ -1,0 +1,7 @@
+First version!
+
+What should be working
+- Kanji test
+- Adding and saving kanji
+- Importing known kanji from WaniKani
+- Changing settings
