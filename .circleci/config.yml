@@ -19,7 +19,8 @@ jobs:
           avd-name: myavd
           no-window: true
           restore-gradle-cache-prefix: v1a
-      - android/run-tests
+      - android/run-tests:
+          test-command: ./gradlew test
       - android/save-gradle-cache:
         cache-prefix: v1a
       - store_test_results:
