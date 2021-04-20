@@ -4,15 +4,27 @@ version: 2.1 # to enable orb usage, you must be using circleci 2.1
 # Android orb docs are available here:  https://circleci.com/developer/orbs/orb/circleci/android
 orbs:
   android: circleci/android@1.0
+  test:
+    executor:
+      name: android/android-machine
+      resource-class: large
+    steps:
+      - checkout
+      - android/create-avd:
+          avd-name: myavd
+          install: true
+          system-image: system-images;android-29;default;x86
+      - android/start-emulator:
+          avd-name: myavd
+          no-window: true
+          restore-gradle-cache-prefix: v1a
+      - android/run-tests
+      - android/save-gradle-cache:
+        cache-prefix: v1a
+      - store_test_results:
+            path: test-results
 workflows:
   test:
     jobs:
-      # This job uses the Android machine image by default
-      - android/run-ui-tests:
-          # Use pre-steps and post-steps if necessary
-          # to execute custom steps before and afer any of the built-in steps
-          system-image: system-images;android-29;default;x86
-          post-steps:
-            - store_test_results:
-                path: test-results
+      - test
           
