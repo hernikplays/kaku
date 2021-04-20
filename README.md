@@ -1,4 +1,6 @@
 # Kaku
+![CircleCI](https://img.shields.io/circleci/build/github/hernikplays/kaku)
+
 *"Basically a [Sakubun](https://sakubun.herokuapp.com) clone for Android"*
 
 ###### This app uses material icons licensed under the [Apache 2.0](https://www.apache.org/licenses/LICENSE-2.0.txt) license.
