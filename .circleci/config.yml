@@ -12,6 +12,7 @@ workflows:
           # Use pre-steps and post-steps if necessary
           # to execute custom steps before and afer any of the built-in steps
           system-image: system-images;android-29;default;x86
-          steps:
+          post-steps:
             - store_test_results:
                 path: test-results
+          
