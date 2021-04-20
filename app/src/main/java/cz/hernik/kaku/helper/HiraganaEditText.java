@@ -1,4 +1,4 @@
-package cz.hernikplays.kaku.helper;
+package cz.hernik.kaku.helper;
 
 import android.content.Context;
 import android.text.Editable;

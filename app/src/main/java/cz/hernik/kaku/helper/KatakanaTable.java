@@ -1,6 +1,4 @@
-package cz.hernikplays.kaku.helper;
-
-import android.util.Log;
+package cz.hernik.kaku.helper;
 
 import java.util.ArrayList;
 import java.util.HashMap;

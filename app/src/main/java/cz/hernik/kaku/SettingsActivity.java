@@ -1,4 +1,4 @@
-package cz.hernikplays.kaku;
+package cz.hernik.kaku;
 
 import android.os.Bundle;
 

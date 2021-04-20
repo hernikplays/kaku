@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/FirstFragment"
-        android:name="cz.hernikplays.kaku.FirstFragment"
+        android:name="cz.hernik.kaku.FirstFragment"
         android:label="@string/home_label"
         tools:layout="@layout/fragment_first">
 
@@ -20,7 +20,7 @@
     </fragment>
     <fragment
         android:id="@+id/KanjiWritingStartFragment"
-        android:name="cz.hernikplays.kaku.KanjiWritingStartFragment"
+        android:name="cz.hernik.kaku.KanjiWritingStartFragment"
         android:label="@string/label_writing"
         tools:layout="@layout/fragment_kanji_writing_start">
         <action
@@ -35,7 +35,7 @@
     </fragment>
     <fragment
         android:id="@+id/KanjiWritingFragment"
-        android:name="cz.hernikplays.kaku.KanjiWritingFragment"
+        android:name="cz.hernik.kaku.KanjiWritingFragment"
         android:label="@string/label_writing"
         tools:layout="@layout/fragment_kanji_writing">
 
@@ -43,7 +43,7 @@
 
     <fragment
         android:id="@+id/SecondFragment"
-        android:name="cz.hernikplays.kaku.SecondFragment"
+        android:name="cz.hernik.kaku.SecondFragment"
         android:label="@string/list_label"
         tools:layout="@layout/fragment_second">
 

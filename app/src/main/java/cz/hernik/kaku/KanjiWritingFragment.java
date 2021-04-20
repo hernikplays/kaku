@@ -1,4 +1,4 @@
-package cz.hernikplays.kaku;
+package cz.hernik.kaku;
 
 import android.app.Dialog;
 import android.content.Context;
@@ -12,7 +12,6 @@ import androidx.preference.PreferenceManager;
 
 import android.os.Handler;
 import android.text.Html;
-import android.util.Log;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -38,7 +37,7 @@ import java.util.regex.Pattern;
 import com.atilika.kuromoji.ipadic.Token;
 import com.atilika.kuromoji.ipadic.Tokenizer;
 
-import cz.hernikplays.kaku.helper.KatakanaTable;
+import cz.hernik.kaku.helper.KatakanaTable;
 
 public class KanjiWritingFragment extends Fragment {
 
@@ -95,6 +94,24 @@ public class KanjiWritingFragment extends Fragment {
                 TextView english = mainView.findViewById(R.id.english);
                 english.setText("");
                 currentIndex++;
+                if(currentIndex>knownSentences.size()){
+                    AlertDialog.Builder d = new AlertDialog.Builder(c);
+                    d.setTitle("No more sentences available");
+                    d.setMessage("Looks like that's it! There are no more sentences left, great job! Press Ok to move back to kanji list.");
+                    d.setCancelable(false);
+                    d.setPositiveButton("Ok", (dialog, which) -> {
+                        Fragment f = null;
+                        try {
+                            f = SecondFragment.class.newInstance();
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+
+                        getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.flContent,f).commit();
+                    });
+                    d.create().show();
+                    return;
+                }
                 try {
                     displayKanji(knownSentences.get(currentIndex).getString("FIELD1"));
                 } catch (JSONException e) {
@@ -137,7 +154,6 @@ public class KanjiWritingFragment extends Fragment {
                     text = scanner.useDelimiter("\\A").next();
                 }
                 sentences = new JSONArray(text);
-                Log.d("DEBUG",sentences.getJSONObject(0).getString("FIELD1"));
             } catch (IOException | JSONException e) {
                 e.printStackTrace();
             }

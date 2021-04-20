@@ -1,4 +1,4 @@
-package cz.hernikplays.kaku.helper;
+package cz.hernik.kaku.helper;
 
 import java.util.HashMap;
 
