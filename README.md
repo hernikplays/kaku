@@ -6,6 +6,9 @@
 ## About
 This is an application for japanese learners who want to practice writing (+reading) kanji on keyboard on their phone! Simply open the app, add some kanji and test yourself, everything should work offline (except, of course, the WaniKani integration which requires internet connection, d'uh)
 
+## Donate
+BitCoin: `1L5ETErX8fVfRxLP8KEU4hv4VaAwGqKLCC`
+Liberapay: [hernikplays](https://liberapay.com/hernikplays)
 
 ## Licenses
 
