@@ -8,12 +8,15 @@
         <item name="android:textSize">33dp</item>
         <item name="android:textStyle">bold</item>
         <item name="android:gravity">center</item>
+        <item name="android:textColor">?text_color</item>
     </style>
     <style name="Paragraph">
         <item name="android:textSize">18dp</item>
+        <item name="android:textColor">?text_color</item>
     </style>
     <style name="InputName">
         <item name="android:textSize">24dp</item>
         <item name="android:textStyle">bold</item>
+        <item name="android:textColor">?text_color</item>
     </style>
 </resources>

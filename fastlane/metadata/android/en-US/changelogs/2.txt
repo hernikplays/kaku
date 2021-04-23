@@ -1,0 +1,5 @@
+Bug fixes
+
+- Fixed dark theme bug
+- Fixed license text overflow
+- Fixed settings back button
