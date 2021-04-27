@@ -8,11 +8,10 @@
     <string name="label_writing">Writing</string>
 
     <!-- Home -->
-    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="welcome">Welcome to\nKaku</string>
     <string name="welcome_info_1">Kaku is a tool to practice kanji in real sentences.</string>
     <string name="welcome_info_2">You will be given a sentence with kanji and you\'ll write it in hiragana.</string>
-    <string name="welcome_info_3">To get started, swipe right to view the menu and click \"Kanji list\" to create a list of kanji you know.</string>
+    <string name="welcome_info_3">To get started, swipe right to view the menu and click on \"Kanji list\" to create a list of kanji you know.</string>
 
     <!-- Kanji list -->
     <string name="save">Save</string>
@@ -52,5 +51,8 @@
     <string name="runs_thanks">Kaku runs thanks to these\n open-source resources:</string>
     <string name="licenses">- Material Icons used under Apache 2.0 License\n- JP-EN sentences from Tatoeba.org\nused under CC BY 2.0 license\n- HiraganaEditText by jehutyno\nused under Apache 2.0 license\n- Kuromoji morphological analyzer\n used under the Apache 2.0 license</string>
     <string name="btn_repo">GitHub Repo</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hiragana_label">Hiragana Practice</string>
 
 </resources>

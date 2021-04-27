@@ -122,8 +122,7 @@ public class SecondFragment extends Fragment {
 
     private void WKImport() throws IOException, InterruptedException {
         EditText wk = mainView.findViewById(R.id.wkApiKey);
-        String apiKey = wk.getText().toString();
-
+        String apiKey = wk.getText().toString().replaceAll("[^A-Za-z0-9\\-]+","");
         AlertDialog.Builder builder = new AlertDialog.Builder(c);
         builder.setView(R.layout.progress);
         builder.setCancelable(false);

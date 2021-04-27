@@ -17,6 +17,12 @@
         <action
             android:id="@+id/action_SecondFragment_to_KanjiWritingStart"
             app:destination="@id/KanjiWritingStartFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_SecondFragment2"
+            app:destination="@id/SecondFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_HiraganaWritingStart"
+            app:destination="@id/HiraganaWritingStart" />
     </fragment>
     <fragment
         android:id="@+id/KanjiWritingStartFragment"
@@ -32,6 +38,9 @@
         <action
             android:id="@+id/action_KanjiWritingStart_to_KanjiWriting"
             app:destination="@id/KanjiWritingFragment"/>
+        <action
+            android:id="@+id/action_KanjiWritingStartFragment_to_HiraganaWritingStart"
+            app:destination="@id/HiraganaWritingStart" />
     </fragment>
     <fragment
         android:id="@+id/KanjiWritingFragment"
@@ -53,5 +62,23 @@
         <action
             android:id="@+id/action_SecondFragment_to_KanjiWritingStart"
             app:destination="@id/KanjiWritingStartFragment" />
+        <action
+            android:id="@+id/action_SecondFragment_to_HiraganaWritingStart"
+            app:destination="@id/HiraganaWritingStart" />
+    </fragment>
+    <fragment
+        android:id="@+id/HiraganaWritingStart"
+        android:name="cz.hernik.kaku.HiraganaWritingStart"
+        android:label="@string/hiragana_label"
+        tools:layout="@layout/fragment_hiragana_writing_start">
+        <action
+            android:id="@+id/action_HiraganaWritingStart_to_KanjiWritingStartFragment"
+            app:destination="@id/KanjiWritingStartFragment" />
+        <action
+            android:id="@+id/action_HiraganaWritingStart_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/action_HiraganaWritingStart_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
     </fragment>
 </navigation>
