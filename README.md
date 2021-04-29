@@ -1,5 +1,5 @@
 # Kaku
-![CircleCI](https://img.shields.io/circleci/build/github/hernikplays/kaku) [![Codacy Badge](https://app.codacy.com/project/badge/Grade/ae8059400de64338b008d9dc163a5335)](https://www.codacy.com/gh/hernikplays/kaku/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=hernikplays/kaku&amp;utm_campaign=Badge_Grade)
+![CircleCI](https://img.shields.io/circleci/build/github/hernikplays/kaku) [![Codacy Badge](https://app.codacy.com/project/badge/Grade/ae8059400de64338b008d9dc163a5335)](https://www.codacy.com/gh/hernikplays/kaku/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=hernikplays/kaku&amp;utm_campaign=Badge_Grade) ![GitHub all releases](https://img.shields.io/github/downloads/hernikplays/kaku/total?logo=github)
 
 *"Basically a [Sakubun](https://sakubun.herokuapp.com) clone for Android"*
 
