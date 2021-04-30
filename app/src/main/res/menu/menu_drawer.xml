@@ -13,5 +13,9 @@
             android:id="@+id/nav_third_fragment"
             android:icon="?attr/icon_quiz"
             android:title="@string/label_writing"/>
+        <item
+            android:id="@+id/nav_hiragana_start"
+            android:icon="?attr/icon_hiragana"
+            android:title="@string/hiragana_label"/>
     </group>
 </menu>

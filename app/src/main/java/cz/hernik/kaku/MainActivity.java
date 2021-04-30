@@ -18,7 +18,6 @@ import android.view.MenuItem;
 public class MainActivity extends AppCompatActivity {
 
     private DrawerLayout mDrawer;
-    private NavigationView nvDrawer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Find our drawer view
         mDrawer = findViewById(R.id.drawer_layout);
-        nvDrawer = (NavigationView) findViewById(R.id.nvView);
+        NavigationView nvDrawer = (NavigationView) findViewById(R.id.nvView);
         setupDrawerContent(nvDrawer);
 
         Fragment f = null;
@@ -63,7 +62,10 @@ public class MainActivity extends AppCompatActivity {
             fragmentClass = SecondFragment.class;
         } else if (itemId == R.id.nav_third_fragment) {
             fragmentClass = KanjiWritingStartFragment.class;
-        } else {
+        } else if (itemId == R.id.nav_hiragana_start){
+            fragmentClass = HiraganaWritingStartFragment.class;
+        }
+        else {
             fragmentClass = FirstFragment.class;
         }
 

@@ -68,7 +68,7 @@
     </fragment>
     <fragment
         android:id="@+id/HiraganaWritingStart"
-        android:name="cz.hernik.kaku.HiraganaWritingStart"
+        android:name="cz.hernik.kaku.HiraganaWritingStartFragment"
         android:label="@string/hiragana_label"
         tools:layout="@layout/fragment_hiragana_writing_start">
         <action

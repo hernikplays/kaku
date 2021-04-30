@@ -1,6 +1,199 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constLayout_h"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HiraganaWritingStart"/>
+    android:layout_centerHorizontal="true"
+    android:columnCount="3">
+
+    <CheckBox
+        android:id="@+id/check_a_row"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:buttonTint="@color/blueDark"
+        android:gravity="center"
+        android:text="あいうえお"
+        app:layout_constraintBaseline_toBaselineOf="@+id/check_k_row"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <CheckBox
+        android:id="@+id/check_m_row"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:buttonTint="@color/blueDark"
+        android:text="まみむめも"
+        app:layout_constraintBaseline_toBaselineOf="@+id/check_y_row"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <CheckBox
+        android:id="@+id/check_w_row"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:buttonTint="@color/blueDark"
+        android:text="わを"
+        app:layout_constraintBaseline_toBaselineOf="@+id/check_g_row"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <CheckBox
+        android:id="@+id/check_d_row"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:buttonTint="@color/blueDark"
+        android:text="だぢづでど"
+        app:layout_constraintBaseline_toBaselineOf="@+id/check_b_row"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <CheckBox
+        android:id="@+id/check_t_row"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:buttonTint="@color/blueDark"
+        android:text="たちつてと"
+        app:layout_constraintBaseline_toBaselineOf="@+id/check_n_row"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <CheckBox
+        android:id="@+id/check_k_row"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="36dp"
+        android:buttonTint="@color/blueDark"
+        android:gravity="center"
+        android:text="かきくけこ"
+        app:layout_constraintStart_toEndOf="@+id/check_a_row"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+    <CheckBox
+        android:id="@+id/check_s_row"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:buttonTint="@color/blueDark"
+        android:gravity="center"
+        android:text="さしすせそ"
+        app:layout_constraintBaseline_toBaselineOf="@+id/check_k_row"
+        app:layout_constraintStart_toEndOf="@+id/check_k_row" />
+
+    <CheckBox
+        android:id="@+id/check_n_row"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:buttonTint="@color/blueDark"
+        android:text="なにぬねの"
+        app:layout_constraintStart_toEndOf="@+id/check_t_row"
+        app:layout_constraintTop_toBottomOf="@+id/check_k_row" />
+
+    <CheckBox
+        android:id="@+id/check_h_row"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:buttonTint="@color/blueDark"
+        android:text="はひふへほ"
+        app:layout_constraintBaseline_toBaselineOf="@+id/check_n_row"
+        app:layout_constraintStart_toEndOf="@+id/check_n_row" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="@string/select_hiragana"
+        android:textAppearance="@style/Paragraph"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/check_y_row"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:buttonTint="@color/blueDark"
+        android:text="やゆよ"
+        app:layout_constraintStart_toEndOf="@+id/check_m_row"
+        app:layout_constraintTop_toBottomOf="@+id/check_n_row" />
+
+    <CheckBox
+        android:id="@+id/check_r_row"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:buttonTint="@color/blueDark"
+        android:text="らりるれろ"
+        app:layout_constraintBaseline_toBaselineOf="@+id/check_y_row"
+        app:layout_constraintStart_toEndOf="@+id/check_y_row" />
+
+    <CheckBox
+        android:id="@+id/check_g_row"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:buttonTint="@color/blueDark"
+        android:text="がぎぐげご"
+        app:layout_constraintStart_toEndOf="@+id/check_w_row"
+        app:layout_constraintTop_toBottomOf="@+id/check_y_row" />
+
+    <CheckBox
+        android:id="@+id/check_z_row"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:buttonTint="@color/blueDark"
+        android:text="ざじずぜぞ"
+        app:layout_constraintBaseline_toBaselineOf="@+id/check_g_row"
+        app:layout_constraintStart_toEndOf="@+id/check_g_row" />
+
+    <CheckBox
+        android:id="@+id/check_b_row"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:buttonTint="@color/blueDark"
+        android:text="ばびぶべぼ"
+        app:layout_constraintStart_toEndOf="@+id/check_d_row"
+        app:layout_constraintTop_toBottomOf="@+id/check_g_row" />
+
+    <CheckBox
+        android:id="@+id/check_p_row"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:buttonTint="@color/blueDark"
+        android:text="ぱぴぷぺぽ"
+        app:layout_constraintBaseline_toBaselineOf="@+id/check_b_row"
+        app:layout_constraintStart_toEndOf="@+id/check_b_row" />
+
+    <CheckBox
+        android:id="@+id/check_n"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="158dp"
+        android:buttonTint="@color/blueDark"
+        android:text="ん"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/check_b_row" />
+
+    <Button
+        android:id="@+id/btn_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="116dp"
+        android:text="@string/start"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/check_n" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+

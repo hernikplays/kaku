@@ -6,6 +6,7 @@
     <string name="home_label">Home</string>
     <string name="list_label">Kanji list</string>
     <string name="label_writing">Writing</string>
+    <string name="hiragana_label">Hiragana</string>
 
     <!-- Home -->
     <string name="welcome">Welcome to\nKaku</string>
@@ -51,8 +52,9 @@
     <string name="runs_thanks">Kaku runs thanks to these\n open-source resources:</string>
     <string name="licenses">- Material Icons used under Apache 2.0 License\n- JP-EN sentences from Tatoeba.org\nused under CC BY 2.0 license\n- HiraganaEditText by jehutyno\nused under Apache 2.0 license\n- Kuromoji morphological analyzer\n used under the Apache 2.0 license</string>
     <string name="btn_repo">GitHub Repo</string>
+    <string name="select_hiragana">Select hiragana to practice</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="hiragana_label">Hiragana Practice</string>
+    <string name="type_the_romaji">Type in the rōmaji</string>
 
 </resources>

@@ -87,7 +87,7 @@ public class SecondFragment extends Fragment {
         // set save button listener
         view.findViewById(R.id.saveKanji).setOnClickListener(v -> {
             String text = kanjiList.getText().toString();
-
+            if(text.length() < 1) return;
             final Pattern pattern = Pattern.compile("[\u3005\u3400-\u4DB5\u4E00-\u9FCB\uF900-\uFA6A]", Pattern.MULTILINE); // <3 https://github.com/cubetastic33/sakubun/blob/a87d6cf9c686173663955ef93e82baaec5cbc0ec/static/scripts/known_kanji.js#L57
             final Matcher matcher = pattern.matcher(text);
 
