@@ -45,7 +45,7 @@
     <string name="licenses">- Material Icons použito pod licencí Apache 2.0\n- JP-EN z Tatoeba.org\npoužity pod licencí CC BY 2.0\n- HiraganaEditText od jehutyno\nused použit pod licencí Apache 2.0\n- Kuromoji morphological analyzer\n použit pod licencí Apache 2.0</string>
     <string name="btn_repo">GitHub repozitář</string>
     <string name="select_hiragana">Vyberte hiraganu, kterou chcete procvičovat</string>
-    <string name="type_the_romaji">Sem pište rōmaji</string>
+    <string name="type_the_romaji">Sem pište rōmadži</string>
     <string name="left">%d zbývá</string>
     <string name="end">Vypadá to, že jsme u konce</string>
     <string name="ok_return">Stiskněte Ok pro navrácení na obrazovku s výběrem.</string>

@@ -98,7 +98,7 @@ public class SecondFragment extends Fragment {
             }
 
             // save to file
-            SaveKanji(kanji.toString().getBytes());
+            saveKanji(kanji.toString().getBytes());
 
             EditText kanjiEdit = mainView.findViewById(R.id.kanjiList);
             kanjiEdit.setText(kanji.toString());
@@ -201,7 +201,7 @@ public class SecondFragment extends Fragment {
             }
         }
 
-        SaveKanji(kanji.toString().getBytes());
+        saveKanji(kanji.toString().getBytes());
         this.getActivity().runOnUiThread(new Runnable() {
             @Override
             public void run() {
@@ -210,7 +210,7 @@ public class SecondFragment extends Fragment {
         });
     }
 
-    private void SaveKanji(byte[] text){
+    private void saveKanji(byte[] text){
         try (FileOutputStream fos = c.openFileOutput("kanjilist", Context.MODE_PRIVATE)) {
             fos.write(text);
         } catch (IOException e) {
