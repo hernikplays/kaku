@@ -1,0 +1,7 @@
+První verze!
+
+Co by mělo fungovat
+- Kandži test
+- Přidávání a ukládání kandži
+- Importování známé kandži ze služby WaniKani
+- Změna nastavení

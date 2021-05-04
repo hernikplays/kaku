@@ -206,5 +206,113 @@ public class HiraganaTable {
     public static final String hiraganaRegex = "[あいうえおかきくけこがぎぐげごさしすせそざじずぜぞたちつてと" +
             "っだぢづでどなにぬねのはひふへほばびぶべぼぱぴぷぺぽまみむめもやゆよゃゅょらりるれろわをんー。、？]";
 
+    public static final HashMap<String, String> toRomajiMap = new HashMap<String, String>();
+    static {
+        //-
+        toRomajiMap.put("あ","a");
+        toRomajiMap.put("い","i");
+        toRomajiMap.put("う","u");
+        toRomajiMap.put("え","e");
+        toRomajiMap.put("お","o");
 
+        //K
+        toRomajiMap.put("か","ka");
+        toRomajiMap.put("き","ki");
+        toRomajiMap.put("く","ku");
+        toRomajiMap.put("け","ke");
+        toRomajiMap.put("こ","ko");
+
+        //G
+        toRomajiMap.put("が","ga");
+        toRomajiMap.put("ぎ","gi");
+        toRomajiMap.put("ぐ","gu");
+        toRomajiMap.put("げ","ge");
+        toRomajiMap.put("ご","go");
+
+        //S
+        toRomajiMap.put("さ","sa");
+        //toRomajiMap.put("し","si");
+        toRomajiMap.put("し","shi");
+        toRomajiMap.put("す","su");
+        toRomajiMap.put("せ","se");
+        toRomajiMap.put("そ","so");
+
+        //Z
+        toRomajiMap.put("ざ","za");
+        toRomajiMap.put("じ","ji");
+        toRomajiMap.put("ず","zu");
+        toRomajiMap.put("ぜ","ze");
+        toRomajiMap.put("ぞ","zo");
+
+        //T
+        toRomajiMap.put("た","ta");
+        //toRomajiMap.put("ち","ti");
+        toRomajiMap.put("ち","chi");
+        //toRomajiMap.put("つ","tu");
+        toRomajiMap.put("つ","tsu");
+        toRomajiMap.put("て","te");
+        toRomajiMap.put("と","to");
+
+        //D
+        toRomajiMap.put("だ","da");
+        toRomajiMap.put("ぢ","di");
+        toRomajiMap.put("づ","du");
+        toRomajiMap.put("で","de");
+        toRomajiMap.put("ど","do");
+
+        //N
+        toRomajiMap.put("な","na");
+        toRomajiMap.put("に","ni");
+        toRomajiMap.put("ぬ","nu");
+        toRomajiMap.put("ね","ne");
+        toRomajiMap.put("の","no");
+
+        //H
+        toRomajiMap.put("は","ha");
+        toRomajiMap.put("ひ","hi");
+        //toRomajiMap.put("ふ","hu");
+        toRomajiMap.put("ふ","fu");
+        toRomajiMap.put("へ","he");
+        toRomajiMap.put("ほ","ho");
+
+        //B
+        toRomajiMap.put("ば","ba");
+        toRomajiMap.put("び","bi");
+        toRomajiMap.put("ぶ","bu");
+        toRomajiMap.put("べ","be");
+        toRomajiMap.put("ぼ","bo");
+
+        //P
+        toRomajiMap.put("ぱ","pa");
+        toRomajiMap.put("ぴ","pi");
+        toRomajiMap.put("ぷ","pu");
+        toRomajiMap.put("ぺ","pe");
+        toRomajiMap.put("ぽ","po");
+
+        //M
+        toRomajiMap.put("ま","ma");
+        toRomajiMap.put("み","mi");
+        toRomajiMap.put("む","mu");
+        toRomajiMap.put("め","me");
+        toRomajiMap.put("も","mo");
+
+        //Y
+        toRomajiMap.put("や","ya");
+        toRomajiMap.put("ゆ","yu");
+        toRomajiMap.put("よ","yo");
+
+        //R
+        toRomajiMap.put("ら","ra");
+        toRomajiMap.put("り","ri");
+        toRomajiMap.put("る","ru");
+        toRomajiMap.put("れ","re");
+        toRomajiMap.put("ろ","ro");
+
+        //W
+        toRomajiMap.put("わ","wa");
+        toRomajiMap.put("を","wo");
+
+        //n
+        toRomajiMap.put("ん","n");
+    }
 }

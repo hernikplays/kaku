@@ -12,20 +12,30 @@
         android:id="@+id/check_a_row"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
+        android:layout_marginStart="16dp"
         android:buttonTint="@color/blueDark"
         android:gravity="center"
-        android:text="あいうえお"
+        android:text="@string/a_row"
         app:layout_constraintBaseline_toBaselineOf="@+id/check_k_row"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <CheckBox
+        android:id="@+id/check_t_row"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:buttonTint="@color/blueDark"
+        android:text="@string/t_row"
+        app:layout_constraintBaseline_toBaselineOf="@+id/check_n_row"
         app:layout_constraintStart_toStartOf="parent" />
 
     <CheckBox
         android:id="@+id/check_m_row"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
+        android:layout_marginStart="16dp"
         android:buttonTint="@color/blueDark"
-        android:text="まみむめも"
+        android:text="@string/m_row"
         app:layout_constraintBaseline_toBaselineOf="@+id/check_y_row"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -33,9 +43,9 @@
         android:id="@+id/check_w_row"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
+        android:layout_marginStart="16dp"
         android:buttonTint="@color/blueDark"
-        android:text="わを"
+        android:text="@string/w_row"
         app:layout_constraintBaseline_toBaselineOf="@+id/check_g_row"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -43,20 +53,10 @@
         android:id="@+id/check_d_row"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
+        android:layout_marginStart="16dp"
         android:buttonTint="@color/blueDark"
-        android:text="だぢづでど"
+        android:text="@string/d_row"
         app:layout_constraintBaseline_toBaselineOf="@+id/check_b_row"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <CheckBox
-        android:id="@+id/check_t_row"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
-        android:buttonTint="@color/blueDark"
-        android:text="たちつてと"
-        app:layout_constraintBaseline_toBaselineOf="@+id/check_n_row"
         app:layout_constraintStart_toStartOf="parent" />
 
     <CheckBox
@@ -67,7 +67,9 @@
         android:layout_marginTop="36dp"
         android:buttonTint="@color/blueDark"
         android:gravity="center"
-        android:text="かきくけこ"
+        android:text="@string/k_row"
+        app:layout_constraintEnd_toStartOf="@+id/check_s_row"
+        app:layout_constraintHorizontal_bias="0.424"
         app:layout_constraintStart_toEndOf="@+id/check_a_row"
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
@@ -75,12 +77,12 @@
         android:id="@+id/check_s_row"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
         android:buttonTint="@color/blueDark"
         android:gravity="center"
-        android:text="さしすせそ"
+        android:text="@string/s_row"
         app:layout_constraintBaseline_toBaselineOf="@+id/check_k_row"
-        app:layout_constraintStart_toEndOf="@+id/check_k_row" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <CheckBox
         android:id="@+id/check_n_row"
@@ -88,7 +90,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:buttonTint="@color/blueDark"
-        android:text="なにぬねの"
+        android:text="@string/n_row"
+        app:layout_constraintEnd_toStartOf="@+id/check_h_row"
+        app:layout_constraintHorizontal_bias="0.43"
         app:layout_constraintStart_toEndOf="@+id/check_t_row"
         app:layout_constraintTop_toBottomOf="@+id/check_k_row" />
 
@@ -96,11 +100,11 @@
         android:id="@+id/check_h_row"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
         android:buttonTint="@color/blueDark"
-        android:text="はひふへほ"
+        android:text="@string/h_row"
         app:layout_constraintBaseline_toBaselineOf="@+id/check_n_row"
-        app:layout_constraintStart_toEndOf="@+id/check_n_row" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
         android:id="@+id/textView7"
@@ -120,7 +124,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:buttonTint="@color/blueDark"
-        android:text="やゆよ"
+        android:text="@string/y_row"
+        app:layout_constraintEnd_toStartOf="@+id/check_r_row"
+        app:layout_constraintHorizontal_bias="0.308"
         app:layout_constraintStart_toEndOf="@+id/check_m_row"
         app:layout_constraintTop_toBottomOf="@+id/check_n_row" />
 
@@ -128,11 +134,11 @@
         android:id="@+id/check_r_row"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
+        android:layout_marginEnd="16dp"
         android:buttonTint="@color/blueDark"
-        android:text="らりるれろ"
+        android:text="@string/r_row"
         app:layout_constraintBaseline_toBaselineOf="@+id/check_y_row"
-        app:layout_constraintStart_toEndOf="@+id/check_y_row" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <CheckBox
         android:id="@+id/check_g_row"
@@ -140,7 +146,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
         android:buttonTint="@color/blueDark"
-        android:text="がぎぐげご"
+        android:text="@string/g_row"
+        app:layout_constraintEnd_toStartOf="@+id/check_z_row"
+        app:layout_constraintHorizontal_bias="0.437"
         app:layout_constraintStart_toEndOf="@+id/check_w_row"
         app:layout_constraintTop_toBottomOf="@+id/check_y_row" />
 
@@ -148,11 +156,11 @@
         android:id="@+id/check_z_row"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
         android:buttonTint="@color/blueDark"
-        android:text="ざじずぜぞ"
+        android:text="@string/z_row"
         app:layout_constraintBaseline_toBaselineOf="@+id/check_g_row"
-        app:layout_constraintStart_toEndOf="@+id/check_g_row" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <CheckBox
         android:id="@+id/check_b_row"
@@ -160,7 +168,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:buttonTint="@color/blueDark"
-        android:text="ばびぶべぼ"
+        android:text="@string/b_row"
+        app:layout_constraintEnd_toStartOf="@+id/check_p_row"
+        app:layout_constraintHorizontal_bias="0.446"
         app:layout_constraintStart_toEndOf="@+id/check_d_row"
         app:layout_constraintTop_toBottomOf="@+id/check_g_row" />
 
@@ -168,19 +178,19 @@
         android:id="@+id/check_p_row"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
         android:buttonTint="@color/blueDark"
-        android:text="ぱぴぷぺぽ"
+        android:text="@string/p_row"
         app:layout_constraintBaseline_toBaselineOf="@+id/check_b_row"
-        app:layout_constraintStart_toEndOf="@+id/check_b_row" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <CheckBox
         android:id="@+id/check_n"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="158dp"
         android:buttonTint="@color/blueDark"
-        android:text="ん"
+        android:text="@string/n"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/check_b_row" />
 
@@ -188,9 +198,10 @@
         android:id="@+id/btn_start"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="160dp"
         android:layout_marginTop="116dp"
         android:text="@string/start"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/check_n" />
 </androidx.constraintlayout.widget.ConstraintLayout>

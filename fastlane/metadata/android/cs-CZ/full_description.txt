@@ -1,0 +1,5 @@
+Kaku je aplikace pro lidi učící se japonsky a chtějí si procvičit psaní (a čtení) kandži na klávesnici svého telefonu!
+<br>
+Stačí otevřít aplikaci a přidat nějaké znaky kandži a můžete začit trénovat.  Vše by mělo fungovat i bez připojení k síti (kromě, samozřejmě, WaniKani integrace)
+<br>
+Používá věty z Tatoeba.org obsahující pouze kandži, které znáte a máte v seznamu.

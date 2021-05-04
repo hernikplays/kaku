@@ -1,0 +1,10 @@
+Spravené chyby
+
+- Opraven pád aplikace při zadávání znaků jiných než písmena a-z nebo čísla do pole pro WaniKani API klíč
+- Již není možné mít kandži list s délkou 0
+
+Novinky
+
+- Přidán hiragana test
+- Body se nyní zobrazují gramaticky správně
+- Přidán český překlad

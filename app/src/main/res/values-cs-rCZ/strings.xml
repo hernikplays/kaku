@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Kaku</string>
+    <string name="action_settings">Nastavení</string>
+    <string name="home_label">Domů</string>
+    <string name="list_label">Seznam kandži</string>
+    <string name="label_writing">Psaní</string>
+    <string name="welcome">Vítejte v\nKaku</string>
+    <string name="welcome_info_1">Kaku je nástroj na procvičování kandži ve skutečných větách.</string>
+    <string name="welcome_info_2">Dostanete větu s kandži a přepíšete ji do hiragany.</string>
+    <string name="welcome_info_3">Začněte přetažením doprava a nastavením seznamu kandži.</string>
+    <string name="save">Uložit</string>
+    <string name="wk_api_key">Váš WaniKani API klíč</string>
+    <string name="btn_import">Importovat</string>
+    <string name="import_wk_label">Importovat z WaniKani</string>
+    <string name="importing_message">Importuji z WaniKani\nWaniKani API umožňuje 60 požadavků za minutu.</string>
+    <string name="start_writing">Začněte psát!</string>
+    <string name="start">Začít</string>
+    <string name="wrs_kanjicount">Aktuálně máte %s kandži ve svém seznamu. Pokud je chcete upravit, přetáhněte vpravo a klikněte na \"Seznam kandži\".</string>
+    <string name="placeholder">Načítám</string>
+    <string name="msg_filtering">Filtruji věty z %s vět.</string>
+    <string name="msg_loading_sentences">Načítám věty…</string>
+    <string name="submit">Odeslat</string>
+    <string name="input_japanese_msg">Sem piště odpověď</string>
+    <string name="correct"><![CDATA[<p><font color=\'#32f039\'>Správně</font></p> ]]></string>
+    <string name="english_meaning">Anglický význam:\n%s</string>
+    <string name="wrong"><![CDATA[<p><font color=\'#eb4034\'>Špatně!</font><br>%s</p> ]]></string>
+    <string name="next">Další</string>
+    <plurals name="points">
+        <item quantity="one">Získali jste %d bod z %d</item>
+        <item quantity="few">Získali jste %d body z %d</item>
+        <item quantity="other">Získali jste %d bodů z %d</item>
+    </plurals>
+    <string name="out_of_sentences">Žádné další věty</string>
+    <string name="no_more">Ve frontě už nejsou další věty, skvělá práce! Klepněte na Ok pro navrácení do seznamu kandži.</string>
+    <string name="title_activity_settings">Nastavení</string>
+    <string name="punct_summary_off">Kaku NEBUDE kontrolovat, jestli vaše věty končí s 。？ nebo ！</string>
+    <string name="punct_summary_on">Kaku BUDE kontrolovat, jestli vaše věty končí s 。？ nebo ！(podle věty)</string>
+    <string name="punct_title">Kontrolovat 。？ nebo ！</string>
+    <string name="count_title">Počítat body</string>
+    <string name="hiraganaedit_title">Použít HiraganaEditText</string>
+    <string name="hiraganaedit_summary">Zapněte, pokud nechcete používat vlastní japonskou klávesnici</string>
+    <string name="about">O Kaku</string>
+    <string name="runs_thanks">Kaku funguje díky těmto open-source projektům:</string>
+    <string name="licenses">- Material Icons použito pod licencí Apache 2.0\n- JP-EN z Tatoeba.org\npoužity pod licencí CC BY 2.0\n- HiraganaEditText od jehutyno\nused použit pod licencí Apache 2.0\n- Kuromoji morphological analyzer\n použit pod licencí Apache 2.0</string>
+    <string name="btn_repo">GitHub repozitář</string>
+    <string name="select_hiragana">Vyberte hiraganu, kterou chcete procvičovat</string>
+    <string name="type_the_romaji">Sem pište rōmaji</string>
+    <string name="left">%d zbývá</string>
+    <string name="end">Vypadá to, že jsme u konce</string>
+    <string name="ok_return">Stiskněte Ok pro navrácení na obrazovku s výběrem.</string>
+</resources>

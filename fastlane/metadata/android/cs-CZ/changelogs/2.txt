@@ -1,0 +1,5 @@
+Spravené chyby
+
+- Opravena chyba s temným vzhledem
+- Opraveno zobrazení textu v sekci O Kaku
+- Opraveno tlačítko "Zpět" v nastavení

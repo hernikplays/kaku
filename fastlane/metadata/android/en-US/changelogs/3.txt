@@ -1,0 +1,10 @@
+Bug fixes
+
+- Fixed crash when entering characters which are not than a-z and 0-9 into the WK API key box
+- Fixed the ability of having a zero-length kanji list
+
+Additions
+
+- Added hiragana test
+- Added plurals for points
+- Added czech translation for strings

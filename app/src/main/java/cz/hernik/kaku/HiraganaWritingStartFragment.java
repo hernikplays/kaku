@@ -110,7 +110,7 @@ public class HiraganaWritingStartFragment extends Fragment {
                     hiragana.add("ん");
                 }
 
-                startWriting((String[]) hiragana.toArray());
+                startWriting(hiragana.toArray(new String[0]));
             }
         });
     }

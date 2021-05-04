@@ -68,19 +68,19 @@ public class KanjiWritingFragment extends Fragment {
         if(pref.getBoolean("hiraganaedit",true)){
             userInput = view.findViewById(R.id.hiraganaEditText);
             userInput.setVisibility(View.VISIBLE);
-            EditText plain = view.findViewById(R.id.plainEditText);
+            EditText plain = view.findViewById(R.id.answer);
             plain.setVisibility(View.GONE);
         }
         else{
-            userInput = view.findViewById(R.id.plainEditText);
+            userInput = view.findViewById(R.id.answer);
             userInput.setVisibility(View.VISIBLE);
             EditText hira = view.findViewById(R.id.hiraganaEditText);
             hira.setVisibility(View.GONE);
         }
 
         if(pref.getBoolean("count",false)){
-            TextView points = view.findViewById(R.id.points);
-            points.setText(String.format(getString(R.string.points),0,0));
+            TextView points = view.findViewById(R.id.points_k);
+            points.setText(String.format(getResources().getQuantityString(R.plurals.points,0),0,0));
         }
 
         // next onclick
@@ -94,10 +94,10 @@ public class KanjiWritingFragment extends Fragment {
                 TextView english = mainView.findViewById(R.id.english);
                 english.setText("");
                 currentIndex++;
-                if(currentIndex>knownSentences.size()){
+                if(currentIndex>knownSentences.size()){ // check if there are sentences in list
                     AlertDialog.Builder d = new AlertDialog.Builder(c);
-                    d.setTitle("No more sentences available");
-                    d.setMessage("Looks like that's it! There are no more sentences left, great job! Press Ok to move back to kanji list.");
+                    d.setTitle(getString(R.string.out_of_sentences));
+                    d.setMessage(getString(R.string.no_more));
                     d.setCancelable(false);
                     d.setPositiveButton("Ok", (dialog, which) -> {
                         Fragment f = null;
@@ -106,7 +106,7 @@ public class KanjiWritingFragment extends Fragment {
                         } catch (Exception e) {
                             e.printStackTrace();
                         }
-
+                        MainActivity.changeChecked();
                         getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.flContent,f).commit();
                     });
                     d.create().show();
@@ -253,12 +253,13 @@ public class KanjiWritingFragment extends Fragment {
     }
 
     private void displayKanji(String jpSentence) {
-        TextView sentenceDisplay = mainView.findViewById(R.id.japanese_sentence);
+        TextView sentenceDisplay = mainView.findViewById(R.id.hiragana);
         sentenceDisplay.setText(jpSentence);
     }
 
 
     private void submit() throws JSONException {
+        MainActivity.hideKeyboardFrom(getContext(),mainView);
         String jpSentence = knownSentences.get(currentIndex).getString("FIELD1");
         String enSentence = knownSentences.get(currentIndex).getString("FIELD2");
 
@@ -306,10 +307,10 @@ public class KanjiWritingFragment extends Fragment {
                             submit.setClickable(false);
 
                             if(pref.getBoolean("count",false)){
-                                TextView points = mainView.findViewById(R.id.points);
+                                TextView points = mainView.findViewById(R.id.points_k);
                                 yourPoints++;
                                 totalPoints++;
-                                points.setText(String.format(getString(R.string.points), yourPoints, totalPoints));
+                                points.setText(String.format(getResources().getQuantityString(R.plurals.points,yourPoints), yourPoints, totalPoints));
                             }
                         }
                     });
@@ -329,9 +330,9 @@ public class KanjiWritingFragment extends Fragment {
                             Button submit = mainView.findViewById(R.id.submit);
                             submit.setClickable(false);
                             if(pref.getBoolean("count",false)){
-                                TextView points = mainView.findViewById(R.id.points);
+                                TextView points = mainView.findViewById(R.id.points_k);
                                 totalPoints++;
-                                points.setText(String.format(getString(R.string.points), yourPoints, totalPoints));
+                                points.setText(String.format(getResources().getQuantityString(R.plurals.points,yourPoints), yourPoints, totalPoints));
                             }
                         }
                     });

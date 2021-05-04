@@ -86,6 +86,7 @@ public class KanjiWritingStartFragment extends Fragment {
                     e.printStackTrace();
                 }
 
+                MainActivity.changeChecked();
                 getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.flContent,f).commit();
             });
             d.create().show();

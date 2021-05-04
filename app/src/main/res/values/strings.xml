@@ -1,12 +1,12 @@
 <resources>
-    <string name="app_name">Kaku</string>
+    <string name="app_name" translatable="false">Kaku</string>
     <string name="action_settings">Settings</string>
 
     <!-- labels -->
     <string name="home_label">Home</string>
     <string name="list_label">Kanji list</string>
     <string name="label_writing">Writing</string>
-    <string name="hiragana_label">Hiragana</string>
+    <string name="hiragana_label" translatable="false">Hiragana</string>
 
     <!-- Home -->
     <string name="welcome">Welcome to\nKaku</string>
@@ -16,7 +16,7 @@
 
     <!-- Kanji list -->
     <string name="save">Save</string>
-    <string name="wk_api_key">Your WK API key</string>
+    <string name="wk_api_key">Your WaniKani API key</string>
     <string name="btn_import">Import</string>
     <string name="import_wk_label">Import from WaniKani</string>
     <string name="importing_message">Importing from WaniKani\nKeep in mind that the API has a ratelimit 60 requests per minute.</string>
@@ -36,7 +36,16 @@
     <string name="english_meaning">English meaning:\n%s</string>
     <string name="wrong"><![CDATA[<p><font color=\'#eb4034\'>Wrong!</font><br>%s</p> ]]></string>
     <string name="next">Next</string>
-    <string name="points">You got %d points out of %d</string>
+    <plurals name="points">
+        <item quantity="zero">You got %d points out of %d</item>
+        <item quantity="one">You got %d point out of %d</item>
+        <item quantity="two">You got %d points out of %d</item>
+        <item quantity="few">You got %d points out of %d</item>
+        <item quantity="many">You got %d points out of %d</item>
+        <item quantity="other">You got %d points out of %d</item>
+    </plurals>
+    <string name="out_of_sentences">No more sentences available</string>
+    <string name="no_more">There are no more sentences left, great job! Press Ok to move back to kanji list.</string>
 
     <!-- Preferences -->
     <string name="title_activity_settings">Settings</string>
@@ -52,9 +61,28 @@
     <string name="runs_thanks">Kaku runs thanks to these\n open-source resources:</string>
     <string name="licenses">- Material Icons used under Apache 2.0 License\n- JP-EN sentences from Tatoeba.org\nused under CC BY 2.0 license\n- HiraganaEditText by jehutyno\nused under Apache 2.0 license\n- Kuromoji morphological analyzer\n used under the Apache 2.0 license</string>
     <string name="btn_repo">GitHub Repo</string>
+
+    <!-- Hiragana writing -->
     <string name="select_hiragana">Select hiragana to practice</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="type_the_romaji">Type in the rōmaji</string>
+    <string name="left">%d more left</string>
+    <string name="a_row" translatable="false">あいうえお</string>
+    <string name="t_row" translatable="false">たちつてと</string>
+    <string name="m_row" translatable="false">まみむめも</string>
+    <string name="w_row" translatable="false">わを</string>
+    <string name="d_row" translatable="false">だぢづでど</string>
+    <string name="k_row" translatable="false">かきくけこ</string>
+    <string name="s_row" translatable="false">さしすせそ</string>
+    <string name="n_row" translatable="false">なにぬねの</string>
+    <string name="h_row" translatable="false">はひふへほ</string>
+    <string name="y_row" translatable="false">やゆよ</string>
+    <string name="r_row" translatable="false">らりるれろ</string>
+    <string name="g_row" translatable="false">がぎぐげご</string>
+    <string name="z_row" translatable="false">ざじずぜぞ</string>
+    <string name="b_row" translatable="false">ばびぶべぼ</string>
+    <string name="p_row" translatable="false">ぱぴぷぺぽ</string>
+    <string name="n" translatable="false">ん</string>
+    <string name="end">Looks like that\'s it</string>
+    <string name="ok_return">Press Ok to return to the choosing screen.</string>
 
 </resources>
