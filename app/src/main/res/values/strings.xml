@@ -84,5 +84,7 @@
     <string name="n" translatable="false">ん</string>
     <string name="end">Looks like that\'s it</string>
     <string name="ok_return">Press Ok to return to the choosing screen.</string>
+    
+    <!-- Drawing Fragment -->
 
 </resources>
