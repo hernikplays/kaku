@@ -14,4 +14,4 @@ Liberapay: [hernikplays](https://liberapay.com/hernikplays)
 
 ## Licenses
 
-Licenses from other projects used in Kaku can be found in the [LICENSES.md](https://github.com/hernikplays/kaku/blob/main/LICENSE) file.
+Licenses from other projects used in Kaku can be found in the [LICENSES.md](https://github.com/hernikplays/kaku/blob/main/LICENSES.md) file.
