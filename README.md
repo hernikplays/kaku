@@ -14,7 +14,4 @@ Liberapay: [hernikplays](https://liberapay.com/hernikplays)
 
 ## Licenses
 
-###### This app uses material icons licensed under the [Apache 2.0](https://www.apache.org/licenses/LICENSE-2.0.txt) license.
-###### This app uses JP-EN sentences from the [Tatoeba Project](https://tatoeba.org) used under the [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/) license.
-###### This app uses a modified version of [hiraganaedittext](https://github.com/jehutyno/hiraganaedittext) by jehutyno under the [Apache 2.0 license](https://github.com/jehutyno/hiraganaedittext/blob/master/LICENSE). All modifications can be found [here](https://github.com/hernikplays/kaku/blob/main/MODIFIED)
-###### This app uses the [Kuromoji](https://github.com/atilika/kuromoji) morphological analyzer under the [Apache 2.0 license](https://github.com/atilika/kuromoji/blob/master/LICENSE.md)
+Licenses from other projects used in Kaku can be found in the [LICENSES.md](https://github.com/hernikplays/kaku/blob/main/LICENSE) file.

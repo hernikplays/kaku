@@ -70,6 +70,13 @@ public class MainActivity extends AppCompatActivity {
         } else if (itemId == R.id.nav_hiragana_start){
             fragmentClass = HiraganaWritingStartFragment.class;
         }
+        else if(itemId == R.id.nav_drawing){
+            setTitle(menuItem.getTitle());
+            mDrawer.closeDrawers();
+            Intent intent = new Intent(this, DrawActivity.class);
+            startActivity(intent);
+            return;
+        }
         else {
             fragmentClass = FirstFragment.class;
         }

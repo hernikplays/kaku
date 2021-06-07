@@ -17,5 +17,9 @@
             android:id="@+id/nav_hiragana_start"
             android:icon="?attr/icon_hiragana"
             android:title="@string/hiragana_label"/>
+        <item
+            android:id="@+id/nav_drawing"
+            android:icon="?attr/icon_draw"
+            android:title="@string/drawing_label"/>
     </group>
 </menu>

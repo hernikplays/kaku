@@ -21,7 +21,8 @@
         <item name="icon_list">@drawable/ic_list_dark</item>
         <item name="icon_quiz">@drawable/ic_test_dark</item>
         <item name="icon_hiragana">@drawable/ic_hiragana_dark</item>
-
+        <item name="icon_delete">@drawable/ic_delete_dark</item>
+        <item name="icon_draw">@drawable/ic_draw_dark</item>
 
         <item name="colorAccent">#ffffff</item>
     </style>

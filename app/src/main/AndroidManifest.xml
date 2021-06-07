@@ -11,22 +11,26 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Kaku">
-        <activity android:name=".AboutActivity"
-            android:screenOrientation="portrait"
-            />
+        <activity android:name=".DrawActivity"
+            android:theme="@style/Theme.Kaku.NoActionBar"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".AboutActivity"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".SettingsActivity"
             android:label="@string/title_activity_settings"
             android:screenOrientation="portrait">
-            <meta-data android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity"/>
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
         </activity>
         <activity
             android:name=".MainActivity"
             android:configChanges="orientation|screenSize|keyboardHidden"
             android:label="@string/app_name"
-            android:theme="@style/Theme.Kaku.NoActionBar"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Kaku.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

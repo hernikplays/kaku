@@ -17,11 +17,14 @@
 
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
-        <!-- Customize your theme here. -->
+
+        <!-- Icons -->
         <item name="icon_home">@drawable/ic_home_light</item>
         <item name="icon_list">@drawable/ic_list_light</item>
         <item name="icon_quiz">@drawable/ic_test_light</item>
         <item name="icon_hiragana">@drawable/ic_hiragana_light</item>
+        <item name="icon_delete">@drawable/ic_delete_light</item>
+        <item name="icon_draw">@drawable/ic_draw_light</item>
 
         <item name="colorAccent">#1E1E1E</item>
     </style>
