@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.3](https://github.com/hernikplays/kaku/tree/1.3) (2021-06-18)
+
+[Full Changelog](https://github.com/hernikplays/kaku/compare/1.2...1.3)
+
+**Implemented enhancements:**
+
+- Add drawing practice [\#10](https://github.com/hernikplays/kaku/issues/10)
+
 ## [1.2](https://github.com/hernikplays/kaku/tree/1.2) (2021-05-04)
 
 [Full Changelog](https://github.com/hernikplays/kaku/compare/1.1...1.2)
