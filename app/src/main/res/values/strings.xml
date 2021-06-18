@@ -62,8 +62,10 @@
     <!-- about -->
     <string name="about">About</string>
     <string name="runs_thanks">Kaku runs thanks to these\n projects:</string>
-    <string name="licenses">- Material Icons used under Apache 2.0 License\n- JP-EN sentences from Tatoeba.org\nused under CC BY 2.0 license\n- HiraganaEditText by jehutyno\nused under Apache 2.0 license\n- Kuromoji morphological analyzer\n used under the Apache 2.0 license\n- Kanji stroke order font Copyright\n (C) 2004-2020 Ulrich Apel,\n the AAAA project and the Wadoku project\n All rights reserved.</string>
+    <string name="licenses">– Material Icons used under Apache 2.0 License\n- JP-EN sentences from Tatoeba.org\nused under CC BY 2.0 license\n- HiraganaEditText by jehutyno\nused under Apache 2.0 license\n- Kuromoji morphological analyzer\n used under the Apache 2.0 license\n- Kanji stroke order font Copyright\n (C) 2004-2020 Ulrich Apel,\n the AAAA project and the Wadoku project\n All rights reserved.</string>
     <string name="btn_repo">GitHub Repo</string>
+    <string name="all_licenses">All Licenses</string>
+
 
     <!-- Hiragana writing -->
     <string name="select_hiragana">Select hiragana to practice</string>

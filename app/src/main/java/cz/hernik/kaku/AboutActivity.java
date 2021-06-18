@@ -22,6 +22,13 @@ public class AboutActivity extends AppCompatActivity {
                 startActivity(browserIntent);
             }
         });
+        findViewById(R.id.licenses).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent bi = new Intent(Intent.ACTION_VIEW,Uri.parse("https://github.com/hernikplays/kaku/blob/main/LICENSES.md"));
+                startActivity(bi);
+            }
+        });
     }
 
 }

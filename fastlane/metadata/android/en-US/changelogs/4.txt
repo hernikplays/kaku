@@ -1,0 +1,7 @@
+Additions
+
+- Added kanji drawing
+
+Minor fixes
+- fixed few translation strings not appearing translated (due to being hardcoded)
+- added button to link to file with all the licenses of projects used in Kaku

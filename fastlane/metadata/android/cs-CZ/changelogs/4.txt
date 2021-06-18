@@ -1,0 +1,8 @@
+Novinky
+
+- Přidáno procvičování kreslení
+
+Menší změny
+- opraveny chybi s překladem
+- Přidán odkaz na soubor se všemi licencemi projektů, které používám
+
