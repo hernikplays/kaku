@@ -75,8 +75,8 @@ public class KanjiWritingStartFragment extends Fragment {
         else{
             // else show dialog
             AlertDialog.Builder d = new AlertDialog.Builder(this.getContext());
-            d.setTitle("Missing Kanji List");
-            d.setMessage("You need to create a kanji list. Press Ok to move to the kanji list creation screen.");
+            d.setTitle(getString(R.string.missing_list_title));
+            d.setMessage(getString(R.string.missing_list_message));
             d.setCancelable(false);
             d.setPositiveButton("Ok", (dialog, which) -> {
                 Fragment f = null;

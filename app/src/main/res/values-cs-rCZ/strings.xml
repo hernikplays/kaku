@@ -50,4 +50,7 @@
     <string name="ok_return">Stiskněte Ok pro navrácení na obrazovku s výběrem.</string>
     <string name="drawing_label">Cvičení Kreslení</string>
     <string name="erase">Vymazat</string>
+    <string name="missing_list_title">Chybí Seznam Kandži</string>
+    <string name="missing_list_message">Musíte si nejprve vytvořit seznam kandži. Stisknutím Ok se přesunete na stránku, kde si jej můžete vytvořit.</string>
+    <string name="missing_list_message_alt">Musíte si vytvořit seznam kandži. Stisknutím Ok se vrátíte.</string>
 </resources>

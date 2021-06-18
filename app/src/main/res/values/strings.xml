@@ -29,6 +29,8 @@
     <string name="placeholder">Loading</string>
     <string name="msg_filtering">Filtering sentences from %s sentences.</string>
     <string name="msg_loading_sentences">Loading sentences…</string>
+    <string name="missing_list_title">Missing Kanji List</string>
+    <string name="missing_list_message">You need to create a kanji list. Press Ok to move to the kanji list creation screen.</string>
 
     <!-- Kanji Writing -->
     <string name="submit">Submit</string>
@@ -88,5 +90,6 @@
 
     <!-- Drawing Fragment -->
     <string name="erase">Erase</string>
+    <string name="missing_list_message_alt">You need to create a kanji list. Press Ok to go back.</string>
 
 </resources>

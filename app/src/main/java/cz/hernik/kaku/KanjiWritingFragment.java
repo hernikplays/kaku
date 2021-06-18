@@ -124,6 +124,7 @@ public class KanjiWritingFragment extends Fragment {
             }
         });
 
+        // get kanji list from args of previous fragment
         String knownKanji = this.getArguments().getString("kanjilist");
         AssetManager assetManager = getActivity().getAssets();
         mainView = view;

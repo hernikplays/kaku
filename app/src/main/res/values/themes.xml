@@ -25,6 +25,7 @@
         <item name="icon_hiragana">@drawable/ic_hiragana_light</item>
         <item name="icon_delete">@drawable/ic_delete_light</item>
         <item name="icon_draw">@drawable/ic_draw_light</item>
+        <item name="icon_next">@drawable/ic_next_light</item>
 
         <item name="colorAccent">#1E1E1E</item>
     </style>

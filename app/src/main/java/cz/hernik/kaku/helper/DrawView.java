@@ -7,8 +7,10 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Path;
+import android.graphics.PorterDuff;
 import android.graphics.Typeface;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 
@@ -27,6 +29,7 @@ public class DrawView extends View {
     private Canvas drawCanvas;
     private Bitmap canvasBitmap;
     private float currentBrushSize, lastBrushSize;
+    private String currChar;
 
     public DrawView(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
@@ -37,7 +40,6 @@ public class DrawView extends View {
     protected void onDraw(Canvas canvas) {
         canvas.drawBitmap(canvasBitmap, 0 , 0, canvasPaint);
         canvas.drawPath(drawPath, drawPaint);
-        SetCharacter("今"); //TODO: implement this function and place it somewhere else
     }
 
     @Override
@@ -46,6 +48,7 @@ public class DrawView extends View {
 
         canvasBitmap = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888);
         drawCanvas = new Canvas(canvasBitmap);
+        setCharacter(currChar); // is it good to leave it here?
     }
 
     @Override
@@ -99,10 +102,15 @@ public class DrawView extends View {
         canvasPaint = new Paint(Paint.DITHER_FLAG);
     }
 
-    public void SetCharacter(String s){
+    public void setCurrent(String s){
+        currChar = s;
+    }
+
+    private void setCharacter(String s){
+        currChar = s;
         Paint textPaint = new Paint();
         textPaint.setTextAlign(Paint.Align.CENTER);
-        int text = 0;
+        int text;
         int nightModeFlags =
                 getContext().getResources().getConfiguration().uiMode &
                         Configuration.UI_MODE_NIGHT_MASK;
@@ -114,9 +122,15 @@ public class DrawView extends View {
         }
         textPaint.setColor(text);
         textPaint.setTypeface(ResourcesCompat.getFont(getContext(),R.font.stroke_orders));
-        textPaint.setTextSize(300);
+        textPaint.setTextSize(600);
 
         drawCanvas.drawText(s, drawCanvas.getWidth()/2,(int) ((drawCanvas.getHeight() / 2) - ((textPaint.descent() + textPaint.ascent()) / 2)),textPaint); // https://stackoverflow.com/a/11121873
+    }
+
+    public void eraseAll() {
+        drawCanvas.drawColor(0, PorterDuff.Mode.CLEAR);
+        setCharacter(currChar);
+        invalidate();
     }
 
 }

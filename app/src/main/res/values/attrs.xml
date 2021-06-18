@@ -6,6 +6,7 @@
     <attr name="icon_hiragana" format="reference"/>
     <attr name="icon_delete" format="reference"/>
     <attr name="icon_draw" format="reference"/>
+    <attr name="icon_next" format="reference"/>
     <attr name="navbar_background" format="color"/>
     <attr name="text_color" format="color"/>
 </resources>
