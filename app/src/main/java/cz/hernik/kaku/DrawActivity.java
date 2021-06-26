@@ -42,7 +42,7 @@ public class DrawActivity extends AppCompatActivity {
         });
         drawV = findViewById(R.id.drawView);
         index = 0;
-        drawV.setCurrent(kanji.get(index));
+        drawV.setCurrent(MainActivity.kanjiList.get(index));
     }
 
     @Override
@@ -57,7 +57,7 @@ public class DrawActivity extends AppCompatActivity {
                 break;
             case R.id.action_next:
                 index+=1;
-                if(index == kanji.size()-1){
+                if(index == MainActivity.kanjiList.size()-1){
                     AlertDialog.Builder d = new AlertDialog.Builder(this);
                     d.setTitle(getString(R.string.end));
                     d.setMessage(getString(R.string.ok_return));
@@ -68,7 +68,7 @@ public class DrawActivity extends AppCompatActivity {
                     d.create().show();
                 }
                 else {
-                    drawV.setCurrent(kanji.get(index));
+                    drawV.setCurrent(MainActivity.kanjiList.get(index));
                     drawV.eraseAll();
                 }
                 break;
@@ -84,37 +84,8 @@ public class DrawActivity extends AppCompatActivity {
     }
 
     private void loadList(){ // loads kanji list to private var
-        boolean foundFile = true;
-
-        FileInputStream fis = null;
-        try {
-            fis = this.openFileInput("kanjilist");
-        } catch (FileNotFoundException e) {
-            foundFile = false;
-        }
-
-        if(foundFile){
-            // when found file, read it
-            String content;
-
-            InputStreamReader inputStreamReader =
-                    new InputStreamReader(fis, StandardCharsets.UTF_8);
-            StringBuilder stringBuilder = new StringBuilder();
-            try (BufferedReader reader = new BufferedReader(inputStreamReader)) {
-                String line = reader.readLine();
-                while (line != null) {
-                    stringBuilder.append(line).append('\n');
-                    line = reader.readLine();
-                }
-            } catch (IOException e) {
-                e.printStackTrace();
-            } finally {
-                content = stringBuilder.toString();
-            }
-            kanji = Arrays.asList(content.split("(?!^)"));
-        }
-        else{
-            // else show dialog
+        if(MainActivity.kanjiList.size() < 1){
+            // show dialog error
             AlertDialog.Builder d = new AlertDialog.Builder(this);
             d.setTitle(getString(R.string.missing_list_title));
             d.setMessage(getString(R.string.missing_list_message_alt));

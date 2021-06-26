@@ -8,6 +8,9 @@
 ## About
 This is an application for japanese learners who want to practice writing (+reading) kanji on keyboard on their phone! Simply open the app, add some kanji and test yourself, everything should work offline (except, of course, the WaniKani integration which requires internet connection, d'uh)
 
+## Help, I'm on a device with MIUI 12 (or other device with Force Dark Mode) and I set color theme to light but it's staying dark
+Make sure Kaku is **not** allowed in the list of apps to force dark mode in dark mode settings. [MIUI How-to](https://youtu.be/n252Lm5zIzM?t=27) (may be under different setting)
+
 ## Donate
 BitCoin: `1L5ETErX8fVfRxLP8KEU4hv4VaAwGqKLCC`
 Liberapay: [hernikplays](https://liberapay.com/hernikplays)

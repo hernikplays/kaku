@@ -21,7 +21,7 @@
     <string name="btn_import">Import</string>
     <string name="import_wk_label">Import from WaniKani</string>
     <string name="importing_message">Importing from WaniKani\nKeep in mind that the API has a ratelimit 60 requests per minute.</string>
-
+    <string name="kanjilist_toast">You do not have any kanji in your kanji list.</string>
     <!-- Kanji Writing Start -->
     <string name="start_writing">Start writing!</string>
     <string name="start">Start</string>
@@ -58,11 +58,17 @@
     <string name="count_title">Count points</string>
     <string name="hiraganaedit_title">Use HiraganaEditText</string>
     <string name="hiraganaedit_summary">If you don\'t want to use a keyboard with hiragana</string>
+    <string name="setting_theme">Set color theme manually?</string>
+    <string name="setting_choosetheme">Choose a theme</string>
+    <string name="dark">Dark theme</string>
+    <string name="light">Light theme</string>
+    <string name="settings_kanji_test">Kanji Test Settings</string>
+    <string name="settings_appearance">Appearance</string>
 
     <!-- about -->
     <string name="about">About</string>
     <string name="runs_thanks">Kaku runs thanks to these\n projects:</string>
-    <string name="licenses">– Material Icons used under Apache 2.0 License\n- JP-EN sentences from Tatoeba.org\nused under CC BY 2.0 license\n- HiraganaEditText by jehutyno\nused under Apache 2.0 license\n- Kuromoji morphological analyzer\n used under the Apache 2.0 license\n- Kanji stroke order font Copyright\n (C) 2004-2020 Ulrich Apel,\n the AAAA project and the Wadoku project\n All rights reserved.</string>
+    <string name="licenses">– Material Icons used under Apache 2.0 License\n– JP–EN sentences from Tatoeba.org\nused under CC BY 2.0 license\n- HiraganaEditText by jehutyno\nused under Apache 2.0 license\n- Kuromoji morphological analyzer\n used under the Apache 2.0 license\n- Kanji stroke order font Copyright\n © 2004-2020 Ulrich Apel,\n the AAAA project and the Wadoku project\n All rights reserved.</string>
     <string name="btn_repo">GitHub Repo</string>
     <string name="all_licenses">All Licenses</string>
 

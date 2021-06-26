@@ -1,6 +1,6 @@
 <PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <PreferenceCategory app:title="Kanji Test Settings">
+    <PreferenceCategory app:title="@string/settings_kanji_test">
 
         <SwitchPreferenceCompat
             app:key="punct"
@@ -15,6 +15,10 @@
             app:title="@string/hiraganaedit_title"
             app:summary="@string/hiraganaedit_summary"
             app:defaultValue="true"/>
+    </PreferenceCategory>
+    <PreferenceCategory app:title="@string/settings_appearance">
+        <SwitchPreferenceCompat app:key="customtheme" app:title="@string/setting_theme"/>
+        <ListPreference app:dependency="customtheme" app:dialogTitle="@string/setting_choosetheme" app:entries="@array/theme_select" app:entryValues="@array/theme_values" app:key="theme" app:title="@string/setting_choosetheme"/>
     </PreferenceCategory>
 
 

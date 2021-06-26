@@ -25,6 +25,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 import java.util.regex.Matcher;
@@ -99,6 +100,8 @@ public class SecondFragment extends Fragment {
 
             // save to file
             saveKanji(kanji.toString().getBytes());
+            // save to the MainActivity var
+            MainActivity.kanjiList = Arrays.asList(kanji.toString().split("(?!^)"));
 
             EditText kanjiEdit = mainView.findViewById(R.id.kanjiList);
             kanjiEdit.setText(kanji.toString());
