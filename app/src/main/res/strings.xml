@@ -1,0 +1,103 @@
+<resources>
+    <string name="app_name" translatable="false">Kaku</string>
+    <string name="action_settings">Configurações</string>
+
+    <!-- labels -->
+    <string name="home_label">Início</string>
+    <string name="list_label">Lista de Kanjis</string>
+    <string name="label_writing">Escrita</string>
+    <string name="hiragana_label" translatable="false">Hiragana</string>
+    <string name="drawing_label">Prática de Desenho</string>
+
+    <!-- Home -->
+    <string name="welcome">Bem-vindo ao\nKaku</string>
+    <string name="welcome_info_1">Kaku é uma ferramenta para praticar kanji em frases reais.</string>
+    <string name="welcome_info_2">Você receberá uma sentença com kanji e você vai escrevê-la em hiragana.</string>
+    <string name="welcome_info_3">Para começar, deslize para a direita para visualizar o menu e clique em \"Lista de Kanjis\" para criar uma lista de kanji que você conhece.</string>
+
+    <!-- Kanji list -->
+    <string name="save">Salvar</string>
+    <string name="wk_api_key">Sua chave de API WaniKani</string>
+    <string name="btn_import">Importar</string>
+    <string name="import_wk_label">Importar do WaniKani</string>
+    <string name="importing_message">Importando do WaniKani\nTenha em mente que a API tem um limite de taxa de 60 solicitações por minuto.</string>
+    <string name="kanjilist_toast">Você não tem nenhum kanji em sua lista de kanjis.</string>
+    <!-- Kanji Writing Start -->
+    <string name="start_writing">Comece a escrever!</string>
+    <string name="start">Começar</string>
+    <string name="wrs_kanjicount">Você tem atualmente %s kanjis em sua lista. Para alterar seus kanjis, deslize para a direita e clique em "Lista de Kanjis".</string>
+    <string name="placeholder">Carregando</string>
+    <string name="msg_filtering">Filtrando frases de %s sentenças.</string>
+    <string name="msg_loading_sentences">Carregando sentenças…</string>
+    <string name="missing_list_title">Lista de Kanjis ausente</string>
+    <string name="missing_list_message">Você precisa criar uma lista de kanjis. Pressione Ok para passar para a tela de criação da lista de kanjis.</string>
+
+    <!-- Kanji Writing -->
+    <string name="submit">Enviar</string>
+    <string name="input_japanese_msg">Digite seu japonês aqui</string>
+    <string name="correct"><![CDATA[<p><font color=\'#32f039\'>Correto!</font></p> ]]></string>
+    <string name="english_meaning">Em Inglês significa:\n%s</string>
+    <string name="wrong"><![CDATA[<p><font color=\'#eb4034\'>Errado!</font><br>%s</p> ]]></string>
+    <string name="next">Próximo</string>
+    <plurals name="points">
+        <item quantity="zero">Você conseguiu %d pontos de %d</item>
+        <item quantity="one">Você conseguiu %d ponto de %d</item>
+        <item quantity="two">Você conseguiu %d pontos de %d</item>
+        <item quantity="few">Você conseguiu %d pontos de %d</item>
+        <item quantity="many">Você conseguiu %d pontos de %d</item>
+        <item quantity="other">Você conseguiu %d pontos de %d</item>
+    </plurals>
+    <string name="out_of_sentences">Sem mais sentenças disponíveis</string>
+    <string name="no_more">Não restam mais sentenças, ótimo trabalho! Pressione Ok para voltar para a lista de kanjis.</string>
+
+    <!-- Preferences -->
+    <string name="title_activity_settings">Configurações</string>
+    <string name="punct_summary_off">Kaku NÃO vai verificar se você terminou a sentença com 。？ ou ！</string>
+    <string name="punct_summary_on">Kaku VAI verificar se você terminou a sentença com 。？ ou ！ (dependendo da sentença)</string>
+    <string name="punct_title">Verificar se há 。？ e ！</string>
+    <string name="count_title">Contagem de Pontos</string>
+    <string name="hiraganaedit_title">Usar HiraganaEditText</string>
+    <string name="hiraganaedit_summary">Se você não quiser usar um teclado com hiragana</string>
+    <string name="setting_theme">Definir a cor do tema manualmente?</string>
+    <string name="setting_choosetheme">Escolha um tema</string>
+    <string name="dark">Tema Escuro</string>
+    <string name="light">Tema Claro</string>
+    <string name="settings_kanji_test">Configurações do Teste de Kanjis</string>
+    <string name="settings_appearance">Aparência</string>
+
+    <!-- about -->
+    <string name="about">Sobre</string>
+    <string name="runs_thanks">Kaku funciona graças a estes\n projetos:</string>
+    <string name="licenses">– Material Icons usados sob a Licença Apache 2.0\n– Sentenças JP–EN do Tatoeba.org\nusadas sob a licença CC BY 2.0\n- HiraganaEditText por jehutyno\nusado sob a licença Apache 2.0\n- Analisador morfológico Kuromoji\n usado sob a licença Apache 2.0\n- Kanji stroke order font Copyright\n © 2004-2020 Ulrich Apel,\n the AAAA project and the Wadoku project\n All rights reserved.</string>
+    <string name="btn_repo">Repositório no GitHub</string>
+    <string name="all_licenses">Todas as Licenças</string>
+
+
+    <!-- Hiragana writing -->
+    <string name="select_hiragana">Selecione os hiraganas para praticar</string>
+    <string name="type_the_romaji">Digite em rōmaji</string>
+    <string name="left">Ainda restam %d</string>
+    <string name="a_row" translatable="false">あいうえお</string>
+    <string name="t_row" translatable="false">たちつてと</string>
+    <string name="m_row" translatable="false">まみむめも</string>
+    <string name="w_row" translatable="false">わを</string>
+    <string name="d_row" translatable="false">だぢづでど</string>
+    <string name="k_row" translatable="false">かきくけこ</string>
+    <string name="s_row" translatable="false">さしすせそ</string>
+    <string name="n_row" translatable="false">なにぬねの</string>
+    <string name="h_row" translatable="false">はひふへほ</string>
+    <string name="y_row" translatable="false">やゆよ</string>
+    <string name="r_row" translatable="false">らりるれろ</string>
+    <string name="g_row" translatable="false">がぎぐげご</string>
+    <string name="z_row" translatable="false">ざじずぜぞ</string>
+    <string name="b_row" translatable="false">ばびぶべぼ</string>
+    <string name="p_row" translatable="false">ぱぴぷぺぽ</string>
+    <string name="n" translatable="false">ん</string>
+    <string name="end">Looks like that\'s it</string>
+    <string name="ok_return">Press Ok to return to the choosing screen.</string>
+
+    <!-- Drawing Fragment -->
+    <string name="erase">Apagar</string>
+    <string name="missing_list_message_alt">Você precisa criar uma lista de kanjis. Pressione Ok para voltar.</string>
+
+</resources>
