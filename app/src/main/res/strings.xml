@@ -93,8 +93,8 @@
     <string name="b_row" translatable="false">ばびぶべぼ</string>
     <string name="p_row" translatable="false">ぱぴぷぺぽ</string>
     <string name="n" translatable="false">ん</string>
-    <string name="end">Looks like that\'s it</string>
-    <string name="ok_return">Press Ok to return to the choosing screen.</string>
+    <string name="end">Parece que é isso</string>
+    <string name="ok_return">Pressione Ok para retornar à tela de escolha.</string>
 
     <!-- Drawing Fragment -->
     <string name="erase">Apagar</string>
