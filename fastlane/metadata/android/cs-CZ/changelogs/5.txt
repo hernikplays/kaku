@@ -1,0 +1,7 @@
+Novinky
+
+- Přidán překlad do brazilské portugalštiny (díky RickyM7)
+- Přidáno nastavení pro manuální přepnutí na temný/světlý vzhled
+
+Opravené chyby
+- opraveny některé (další) stringy

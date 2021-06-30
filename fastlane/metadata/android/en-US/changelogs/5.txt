@@ -1,0 +1,7 @@
+Additions
+
+- Added Brazilian Portuguese Translation (thanks to RickyM7)
+- Added a setting for manual dark/light theme
+
+Minor fixes
+- fixed few translation strings (again)
