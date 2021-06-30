@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.4](https://github.com/hernikplays/kaku/tree/1.4) (2021-06-30)
+
+[Full Changelog](https://github.com/hernikplays/kaku/compare/1.3...1.4)
+
+**Implemented enhancements:**
+
+- Manual Dark Mode [\#11](https://github.com/hernikplays/kaku/issues/11)
+- Brazilian Portuguese Translation [\#12](https://github.com/hernikplays/kaku/pull/12) ([RickyM7](https://github.com/RickyM7))
+
 ## [1.3](https://github.com/hernikplays/kaku/tree/1.3) (2021-06-18)
 
 [Full Changelog](https://github.com/hernikplays/kaku/compare/1.2...1.3)
