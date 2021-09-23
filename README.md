@@ -5,6 +5,8 @@
 
 <a href="https://f-droid.org/packages/cz.hernik.kaku"><img src="https://fdroid.gitlab.io/artwork/badge/get-it-on.png" width="300px"></a>
 
+<a href='https://play.google.com/store/apps/details?id=cz.hernik.kaku&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png' width="300px"/></a>
+
 ## About
 This is an application for japanese learners who want to practice writing (+reading) kanji on keyboard on their phone! Simply open the app, add some kanji and test yourself, everything should work offline (except, of course, the WaniKani integration which requires internet connection, d'uh)
 
@@ -18,3 +20,5 @@ Liberapay: [hernikplays](https://liberapay.com/hernikplays)
 ## Licenses
 
 Licenses from other projects used in Kaku can be found in the [LICENSES.md](https://github.com/hernikplays/kaku/blob/main/LICENSES.md) file.
+
+###### Google Play and the Google Play logo are trademarks of Google LLC.
